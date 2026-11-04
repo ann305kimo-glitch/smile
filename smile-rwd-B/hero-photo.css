@@ -174,3 +174,14 @@
 #editorial-main-content .photo-hero-b h1{margin-bottom:0}
 @media(min-width:1024px){#editorial-main-content .photo-hero-b p{position:relative;top:-2px}}
 
+
+/* Keep the B-version guide beneath the headline group rather than over the portrait. */
+.photo-hero-b .photo-hero-copy-inner .photo-hero-scroll{position:relative;top:auto;bottom:auto;left:auto;right:auto;transform:none;margin:24px auto 0}
+@media(max-width:639px){.photo-hero-b .photo-hero-copy-inner .photo-hero-scroll{margin-top:18px}}
+
+/* Keep the guide at the hero bottom, aligned with the left headline area. */
+.photo-hero-b>.photo-hero-scroll{position:absolute;bottom:40px;top:auto;left:28%;right:auto;transform:translateX(-50%);margin:0}
+@media(max-width:639px){.photo-hero-b>.photo-hero-scroll{bottom:26px;left:50%}}
+
+/* Move the B headline and subtitle together down another 20px. */
+.photo-hero-b .photo-hero-copy-inner{position:relative;top:20px}
