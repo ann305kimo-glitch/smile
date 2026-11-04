@@ -1360,3 +1360,6 @@ html.menu-open #ch-header #ch-nav-wrap>li>a:focus-visible{color:#1e4d9d}
 
 /* Remove excess space left below the raised food artwork on mobile. */
 @media(max-width:639px){#section-daily-care .care-food-image{margin-bottom:-4px}}
+
+/* Reduce the original hero headline group by another ten percent and raise it 15px. */
+#editorial-main-content .original-hero-copy{transform:translateY(-30px) scale(.855);transform-origin:center}
