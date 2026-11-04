@@ -1,0 +1,7 @@
+/* Variant A: clear lake-blue editorial palette, with warm neutral backgrounds. */
+:root{
+ --color-blue-50:#f1f8f9;--color-blue-100:#e7f2f4;--color-blue-200:#cce4e8;
+ --color-blue-300:#afd4dc;--color-blue-400:#8dbfc9;--color-blue-500:#70aeb8;
+ --color-blue-600:#3e8d9d;--color-blue-700:#267a8a;--color-blue-800:#267a8a;
+ --color-blue-900:#205e6b;--color-blue-950:#194a54;
+}

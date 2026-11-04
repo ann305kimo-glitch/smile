@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>笑容改造計劃：牙齒矯正全指南</title>
+  <meta name="description" content="10萬元起跳的笑容投資！拆解傳統矯正與隱形牙套背後的金錢、時間、風險與回報。">
+  <meta property="og:title" content="笑容改造計劃：牙齒矯正全指南">
+  <meta property="og:description" content="10萬元起跳的笑容投資！拆解傳統矯正與隱形牙套背後的金錢、時間、風險與回報。">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Google Fonts 全套字體定義 (純黑體 Noto Sans TC) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=block" rel="stylesheet">
+  
+  <!-- 載入外觀樣式表與動態效果表 -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="responsive.css?v=mobile-diet-card-height-221">
+
+  <style>
+    /* 康健標準 Header 專屬樣式 */
+    #ch-header, #ch-header div, #ch-header span, #ch-header h1, #ch-header p, #ch-header a, #ch-header ol, #ch-header ul, #ch-header li {
+      margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; box-sizing: border-box;
+    }
+    #ch-header a { display: flex; text-decoration: none; }
+    #ch-header {
+      position: fixed; width: 100%; top: 0; left: 0; background-color: #fff;
+      -webkit-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+      box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2); z-index: 50;
+    }
+    @media (max-width: 768px) { #ch-header { padding: 8px 0; } }
+    #ch-header #ch-container {
+      width: 100%; padding-right: 15px; padding-left: 15px; margin-right: auto; margin-left: auto;
+      display: -webkit-box; display: -ms-flexbox; display: flex;
+      -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between;
+      -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+    }
+    @media (min-width: 768px) { #ch-header #ch-container { max-width: 720px; } }
+    @media (min-width: 992px) { #ch-header #ch-container { max-width: 960px; } }
+    @media (min-width: 1200px) { #ch-header #ch-container { max-width: 1140px; } }
+    #ch-header h1 img { height: 48px; }
+    @media (max-width: 768px) { #ch-header h1 img { height: 32px; } }
+    #ch-header ul { display: flex !important; list-style: none; }
+    #ch-header ul li a { padding: 23px 12px; display: inline-table; text-decoration: none; color: #222; -webkit-transition: all .5s; transition: all .5s; }
+    #ch-header ul li a:hover { color: #094; }
+    @media (max-width: 768px) { #ch-header ul li a { font-size: 20px; padding: 15px 20px; } }
+    #ch-header #ch-social-group { display: flex !important; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+    @media (max-width: 768px) { #ch-header #ch-social-group { margin-top: 15px; } }
+    #ch-header .ch-social { font-size: 40px; }
+    #ch-header .ch-social a { padding: 0 12px; line-height: 36px; color: #979696; cursor: pointer; }
+    #ch-header #ch-button-toggle { display: none; position: relative; width: 40px; height: 40px; z-index: 10000; cursor: pointer; }
+    @media (max-width: 768px) { #ch-header #ch-button-toggle { display: block; } }
+    #ch-header #ch-button-toggle span {
+      display: block; position: absolute; width: 30px; height: 2px; top: 50%; left: 50%;
+      -webkit-transform: translateX(-50%); transform: translateX(-50%); background-color: #000;
+    }
+    #ch-header #ch-button-toggle span::after, #ch-header #ch-button-toggle span::before {
+      -webkit-transition: all .5s; transition: all .5s; position: absolute; content: ''; display: block; width: 100%; top: 50%; height: 2px; background-color: #000;
+    }
+    #ch-header #ch-button-toggle span::before { top: -8px; }
+    #ch-header #ch-button-toggle span::after { bottom: -8px; top: auto; }
+    #ch-header #ch-button-toggle.active span { background-color: transparent; }
+    #ch-header #ch-button-toggle.active span::before { -webkit-transform: rotate(45deg); transform: rotate(45deg); top: 0; }
+    #ch-header #ch-button-toggle.active span::after { -webkit-transform: rotate(-45deg); transform: rotate(-45deg); top: 0; }
+    @media (max-width: 768px) {
+      #ch-header ul {
+        position: absolute; left: 0; top: 0; height: 0px; background-color: #fff;
+        -webkit-transition: all 0.5s; transition: all 0.5s; overflow: hidden; z-index: 120;
+        display: -webkit-box; display: -ms-flexbox; display: flex;
+        -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column;
+        -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; opacity: 0;
+      }
+      #ch-header ul.opening { height: 100vh; width: 100%; opacity: 1; visibility: visible; background-color: #fff; }
+      #ch-header ul li { width: 100vw; text-align: center; }
+    }
+
+    /* 康健社群追蹤與頁尾樣式 */
+    .ch-section-social { width: 100%; margin: auto; padding: 60px 0; background-color: #fff; }
+    .ch-section-social .ch-wrap { position: relative; width: 100%; }
+    .ch-section-social .ch-wrapper { width: 960px; max-width: calc(100% - 32px); margin: 0 auto; }
+    .ch-section-social h2 { margin: 0 0 20px; color: #222; font-size: 2rem; font-weight: 700; line-height: 1.5; text-align: center; }
+    .ch-social-media { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 40px; }
+    .ch-social-group { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #222; font-size: 1rem; font-weight: 400; line-height: 1.5; letter-spacing: 0.04em; text-align: center; }
+    .ch-social-group img { display: block; width: 50px; height: 50px; margin-bottom: 10px; transition: transform 0.2s ease, filter 0.2s ease; }
+    .ch-social-group:hover img { transform: translateY(-3px); filter: brightness(1.06); }
+    .ch-social-group p { display: block; margin: 0; }
+    @media (max-width: 576px) {
+      .ch-section-social .ch-wrapper { width: calc(100% - 30px); max-width: none; }
+      .ch-section-social h2 { font-size: 1.75rem; }
+      .ch-social-media { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px 8px; justify-items: center; }
+      .ch-social-group img { width: 56px; height: 56px; margin-bottom: 8px; }
+    }
+    footer { width: 100%; padding: 30px 0; color: #373737; background: #fff; }
+    footer a { transition: .3s; text-decoration: none; }
+    footer ul { list-style-type: none; display: flex; justify-content: center; padding: 0; margin: 0; }
+    footer ul li { font-size: 15px; line-height: 15px; border-right: 1px solid #373737; padding: 0 10px 0 0; margin: 0 10px 10px 0; }
+    footer ul li:last-child { border: none; padding: 0; margin: 0; }
+    footer ul li a { color: #373737; line-height: 15px; }
+    footer p { color: #373737; font-size: 14px; line-height: 24px; font-weight: 300; text-align: center; margin-top: 0; margin-bottom: 10px; }
+    @media (max-width: 768px) {
+      footer ul { flex-wrap: wrap; }
+      footer ul li { padding: 0 5px 0 0; margin: 0 5px 10px 0; }
+    }
+
+    /* 主視覺笑臉與整組標題往上拉抬 */
+    .hero-move-up {
+      transform: translateY(-35px);
+    }
+    @media (min-width: 640px) {
+      .hero-move-up {
+        transform: translateY(-55px);
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="typography.css?v=editorial-intro-164">
+
+  <script>document.documentElement.classList.add('fonts-pending');window.smileFontsReady=new Promise(function(resolve){window.resolveSmileFonts=resolve;});</script>
+  <style>html.fonts-pending #root{opacity:0}#root{transition:opacity .18s ease-out}</style>
+  <script src="font-ready.js?v=bold-cover-128" defer></script>
+</head>
+<body class="bg-white text-slate-900 antialiased selection:bg-amber-200" id="header">
+  
+  <div id="root">
+    <div class="min-h-screen bg-white text-slate-900 font-sans selection:bg-amber-200">
+      
+      <!-- 康健標準 Header -->
+      <header id="ch-header">
+        <div id="ch-container">
+            <h1>
+                <a href="/"><img class="logo" src="https://web.commonhealth.com.tw/assets/global/image/CH-logo-w.svg" alt="康健 logo" /></a>
+            </h1>
+            <button id="ch-button-toggle" type="button" aria-label="開啟導覽選單" aria-controls="ch-nav-wrap" aria-expanded="false"><span></span></button>
+            <ul id="ch-nav-wrap">
+                <li><a href="#section-trends">矯正趨勢</a></li>
+                <li><a href="#section-assessment">自我評估</a></li>
+                <li><a href="#section-comparison">種類比較</a></li>
+                <li><a href="#section-daily-care">日常護理</a></li>
+                <li><a href="#section-retention">維持效果</a></li>
+                <li id="ch-social-group">
+                    <div class="ch-social">
+                      <a id="facebookShare" class="gtm-event" aria-label="分享到 Facebook" target="_blank" rel="noopener noreferrer">
+                          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                              <path
+                                  d="M22.67 2.667h-3.49c-3.922 0-6.454 2.574-6.454 6.562v3.028H9.215a.546.546 0 0 0-.548.541v4.385c0 .302.245.54.548.54h3.511v11.07c0 .302.246.54.548.54h4.58a.546.546 0 0 0 .548-.54v-11.07h4.103a.546.546 0 0 0 .548-.54v-4.385a.54.54 0 0 0-.548-.54h-4.103V9.69c0-1.233.295-1.86 1.918-1.86h2.35a.548.548 0 0 0 .549-.548V3.207a.542.542 0 0 0-.548-.54Z"
+                                  fill="#1877F2"></path>
+                          </svg>
+                      </a>
+                    </div>
+                    <div class="ch-social">
+                        <a class="gtm-event" id="lineShare" aria-label="分享到 LINE"
+                            target="_blank">
+                            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M25.342 12.248a.272.272 0 0 1-.267.274H22.44v1.03h2.636c.152 0 .267.123.267.274v.98a.272.272 0 0 1-.267.274H22.44v1.03h2.636c.152 0 .267.122.267.274v.98a.272.272 0 0 1-.267.273H21.2a.262.262 0 0 1-.188-.079h-.007a.324.324 0 0 1-.072-.195V11.27c0-.072.029-.137.072-.188h.007a.243.243 0 0 1 .188-.086h3.875c.152 0 .267.122.267.274v.98Zm-5.36 5.115a.272.272 0 0 1-.267.274h-.972s-.05 0-.072-.007H18.642s-.007 0-.014-.007h-.022l-.014-.022s-.05-.043-.065-.072l-2.767-3.775v3.617a.272.272 0 0 1-.266.273h-.973a.268.268 0 0 1-.267-.273v-6.095c0-.152.123-.274.267-.274h1.045l.014.014h.022v.015h.021v.014h.022v.015l.022.014s.007.014.014.022c0 0 .014.021.022.028l2.766 3.776v-3.624c0-.152.123-.274.267-.274h.972c.152 0 .267.122.267.274v6.095l.007-.008Zm-6.686 0a.272.272 0 0 1-.266.274h-.973a.267.267 0 0 1-.266-.274V11.27c0-.152.122-.274.266-.274h.973c.151 0 .266.122.266.274v6.094Zm-2.341 0a.272.272 0 0 1-.267.274H6.812a.262.262 0 0 1-.187-.079h-.007a.323.323 0 0 1-.072-.195V11.27c0-.152.122-.274.266-.274h.973c.151 0 .267.122.267.274v4.84h2.636c.152 0 .267.123.267.275v.98Zm18.724-3.342c0-6.26-6.21-11.354-13.84-11.354C8.21 2.667 2 7.76 2 14.02c0 5.612 4.92 10.309 11.577 11.202.454.101 1.067.303 1.218.692.137.353.094.908.043 1.268 0 0-.166.987-.194 1.196-.058.353-.281 1.383 1.195.756 1.477-.626 7.969-4.74 10.872-8.119 2.003-2.226 2.968-4.481 2.968-6.98v-.015Z"
+                                    fill="#06C755"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+      </header>
+
+      <!-- 主要特輯內容區塊 -->
+      <main id="editorial-main-content">
+        <section class="w-full">
+          <div class="hero-stage relative w-full min-h-screen bg-[#F0B43A] flex flex-col items-center justify-between px-4 py-4 sm:py-8 overflow-hidden select-none">
+            <!-- 閃爍星芒 -->
+            <div class="absolute w-7 h-7 sm:w-9 sm:h-9 pointer-events-none opacity-80" style="top: 10%; left: 8%; animation: 2.8s ease-in-out 0s infinite normal none running pulse;"><svg viewBox="0 0 100 100" fill="none" class="w-full h-full text-white drop-shadow-sm"><path d="M50 0 C50 35 65 50 100 50 C65 50 50 65 50 100 C50 65 35 50 0 50 C35 50 50 35 50 0 Z" fill="currentColor"></path></svg></div>
+            <div class="absolute w-8 h-8 sm:w-11 sm:h-11 pointer-events-none opacity-80" style="top: 14%; right: 10%; animation: 3.2s ease-in-out 0.8s infinite normal none running pulse;"><svg viewBox="0 0 100 100" fill="none" class="w-full h-full text-white drop-shadow-sm"><path d="M50 0 C50 35 65 50 100 50 C65 50 50 65 50 100 C50 65 35 50 0 50 C35 50 50 35 50 0 Z" fill="currentColor"></path></svg></div>
+            <div class="absolute w-6 h-6 sm:w-8 sm:h-8 pointer-events-none opacity-80" style="left: 10%; bottom: 26%; animation: 2.6s ease-in-out 1.4s infinite normal none running pulse;"><svg viewBox="0 0 100 100" fill="none" class="w-full h-full text-white drop-shadow-sm"><path d="M50 0 C50 35 65 50 100 50 C65 50 50 65 50 100 C50 65 35 50 0 50 C35 50 50 35 50 0 Z" fill="currentColor"></path></svg></div>
+            <div class="absolute w-8 h-8 sm:w-10 sm:h-10 pointer-events-none opacity-80" style="right: 10%; bottom: 22%; animation: 3s ease-in-out 0.5s infinite normal none running pulse;"><svg viewBox="0 0 100 100" fill="none" class="w-full h-full text-white drop-shadow-sm"><path d="M50 0 C50 35 65 50 100 50 C65 50 50 65 50 100 C50 65 35 50 0 50 C35 50 50 35 50 0 Z" fill="currentColor"></path></svg></div>
+            <div class="absolute w-5 h-5 sm:w-7 sm:h-7 pointer-events-none opacity-80" style="top: 42%; left: 6%; animation: 2.4s ease-in-out 1.8s infinite normal none running pulse;"><svg viewBox="0 0 100 100" fill="none" class="w-full h-full text-white drop-shadow-sm"><path d="M50 0 C50 35 65 50 100 50 C65 50 50 65 50 100 C50 65 35 50 0 50 C35 50 50 35 50 0 Z" fill="currentColor"></path></svg></div>
+            <div class="absolute w-6 h-6 sm:w-8 sm:h-8 pointer-events-none opacity-80" style="top: 40%; right: 6%; animation: 3.1s ease-in-out 1.1s infinite normal none running pulse;"><svg viewBox="0 0 100 100" fill="none" class="w-full h-full text-white drop-shadow-sm"><path d="M50 0 C50 35 65 50 100 50 C68 50 50 68 50 100 C50 68 32 50 0 50 C32 50 50 32 50 0 Z" fill="currentColor"></path></svg></div>
+            <div class="h-1 shrink-0"></div>
+
+            <!-- 主視覺笑臉與主副標題：上移 (.hero-move-up) -->
+            <div class="hero-move-up relative z-10 flex flex-col items-center text-center max-w-6xl mx-auto my-auto space-y-0 transition-transform">
+              <div class="relative flex flex-col items-center">
+                <div class="relative w-[88vw] sm:w-[480px] md:w-[580px] lg:w-[680px] xl:w-[760px] 2xl:w-[820px] max-w-[94vw] aspect-square animate-float-hero">
+                  <img alt="大笑表情符號_白牙版" class="w-full h-full object-contain select-none pointer-events-none" src="./images/hero-emoji.png">
+                  <div class="absolute pointer-events-none" style="left: 39.2%; top: 57.5%; transform: translate(-50%, -50%);">
+                    <div class="relative flex items-center justify-center animate-sparkle-gleam" style="--sparkle-dur: 2.2s; --sparkle-delay: 0s; --sparkle-base: 42; width: 42px; height: 42px;">
+                      <svg viewBox="0 0 100 100" fill="none" class="w-full h-full drop-shadow-[0_0_14px_rgba(255,255,255,1)]"><path d="M50 0 C50 32 68 50 100 50 C68 50 50 68 50 100 C50 68 32 50 0 50 C32 50 50 32 50 0 Z" fill="#ffffff"></path><path d="M50 20 C50 40 60 50 80 50 C60 50 50 60 50 80 C50 60 40 50 20 50 C40 50 50 40 50 20 Z" fill="#ffffff" opacity="0.6" transform="rotate(45 50 50)"></path></svg>
+                      <div class="absolute w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_12px_#ffffff]"></div>
+                    </div>
+                  </div>
+                  <div class="absolute pointer-events-none" style="left: 45.8%; top: 58%; transform: translate(-50%, -50%);">
+                    <div class="relative flex items-center justify-center animate-sparkle-gleam" style="--sparkle-dur: 2.4s; --sparkle-delay: 0.7s; --sparkle-base: 48; width: 48px; height: 48px;">
+                      <svg viewBox="0 0 100 100" fill="none" class="w-full h-full drop-shadow-[0_0_14px_rgba(255,255,255,1)]"><path d="M50 0 C50 32 68 50 100 50 C68 50 50 68 50 100 C50 68 32 50 0 50 C32 50 50 32 50 0 Z" fill="#ffffff"></path><path d="M50 20 C50 40 60 50 80 50 C60 50 50 60 50 80 C50 60 40 50 20 50 C40 50 50 40 50 20 Z" fill="#ffffff" opacity="0.6" transform="rotate(45 50 50)"></path></svg>
+                      <div class="absolute w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_12px_#ffffff]"></div>
+                    </div>
+                  </div>
+                  <div class="absolute pointer-events-none" style="left: 52.8%; top: 58.2%; transform: translate(-50%, -50%);">
+                    <div class="relative flex items-center justify-center animate-sparkle-gleam" style="--sparkle-dur: 2.1s; --sparkle-delay: 1.4s; --sparkle-base: 46; width: 46px; height: 46px;">
+                      <svg viewBox="0 0 100 100" fill="none" class="w-full h-full drop-shadow-[0_0_14px_rgba(255,255,255,1)]"><path d="M50 0 C50 32 68 50 100 50 C68 50 50 68 50 100 C50 68 32 50 0 50 C32 50 50 32 50 0 Z" fill="#ffffff"></path><path d="M50 20 C50 40 60 50 80 50 C60 50 50 60 50 80 C50 60 40 50 20 50 C40 50 50 40 50 20 Z" fill="#ffffff" opacity="0.6" transform="rotate(45 50 50)"></path></svg>
+                      <div class="absolute w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_12px_#ffffff]"></div>
+                    </div>
+                  </div>
+                  <div class="absolute pointer-events-none" style="left: 60.5%; top: 57.5%; transform: translate(-50%, -50%);">
+                    <div class="relative flex items-center justify-center animate-sparkle-gleam" style="--sparkle-dur: 2.5s; --sparkle-delay: 0.3s; --sparkle-base: 40; width: 40px; height: 40px;">
+                      <svg viewBox="0 0 100 100" fill="none" class="w-full h-full drop-shadow-[0_0_14px_rgba(255,255,255,1)]"><path d="M50 0 C50 32 68 50 100 50 C68 50 50 68 50 100 C50 68 32 50 0 50 C32 50 50 32 50 0 Z" fill="#ffffff"></path><path d="M50 20 C50 40 60 50 80 50 C60 50 50 60 50 80 C50 60 40 50 20 50 C40 50 50 40 50 20 Z" fill="#ffffff" opacity="0.6" transform="rotate(45 50 50)"></path></svg>
+                      <div class="absolute w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_12px_#ffffff]"></div>
+                    </div>
+                  </div>
+                  <div class="absolute pointer-events-none" style="left: 65.5%; top: 56.5%; transform: translate(-50%, -50%);">
+                    <div class="relative flex items-center justify-center animate-sparkle-gleam" style="--sparkle-dur: 2s; --sparkle-delay: 1.9s; --sparkle-base: 34; width: 34px; height: 34px;">
+                      <svg viewBox="0 0 100 100" fill="none" class="w-full h-full drop-shadow-[0_0_14px_rgba(255,255,255,1)]"><path d="M50 0 C50 32 68 50 100 50 C68 50 50 68 50 100 C50 68 32 50 0 50 C32 50 50 32 50 0 Z" fill="#ffffff"></path><path d="M50 20 C50 40 60 50 80 50 C60 50 50 60 50 80 C50 60 40 50 20 50 C40 50 50 40 50 20 Z" fill="#ffffff" opacity="0.6" transform="rotate(45 50 50)"></path></svg>
+                      <div class="absolute w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_12px_#ffffff]"></div>
+                    </div>
+                  </div>
+                  <div class="absolute pointer-events-none" style="left: 43.5%; top: 72.5%; transform: translate(-50%, -50%);">
+                    <div class="relative flex items-center justify-center animate-sparkle-gleam" style="--sparkle-dur: 2.3s; --sparkle-delay: 1.1s; --sparkle-base: 38; width: 38px; height: 38px;">
+                      <svg viewBox="0 0 100 100" fill="none" class="w-full h-full drop-shadow-[0_0_14px_rgba(255,255,255,1)]"><path d="M50 0 C50 32 68 50 100 50 C68 50 50 68 50 100 C50 68 32 50 0 50 C32 50 50 32 50 0 Z" fill="#ffffff"></path><path d="M50 20 C50 40 60 50 80 50 C60 50 50 60 50 80 C50 60 40 50 20 50 C40 50 50 40 50 20 Z" fill="#ffffff" opacity="0.6" transform="rotate(45 50 50)"></path></svg>
+                      <div class="absolute w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_12px_#ffffff]"></div>
+                    </div>
+                  </div>
+                  <div class="absolute pointer-events-none" style="left: 49.2%; top: 73.8%; transform: translate(-50%, -50%);">
+                    <div class="relative flex items-center justify-center animate-sparkle-gleam" style="--sparkle-dur: 2.2s; --sparkle-delay: 1.7s; --sparkle-base: 42; width: 42px; height: 42px;">
+                      <svg viewBox="0 0 100 100" fill="none" class="w-full h-full drop-shadow-[0_0_14px_rgba(255,255,255,1)]"><path d="M50 0 C50 32 68 50 100 50 C68 50 50 68 50 100 C50 68 32 50 0 50 C32 50 50 32 50 0 Z" fill="#ffffff"></path><path d="M50 20 C50 40 60 50 80 50 C60 50 50 60 50 80 C50 60 40 50 20 50 C40 50 50 40 50 20 Z" fill="#ffffff" opacity="0.6" transform="rotate(45 50 50)"></path></svg>
+                      <div class="absolute w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_12px_#ffffff]"></div>
+                    </div>
+                  </div>
+                  <div class="absolute pointer-events-none" style="left: 55.5%; top: 73.2%; transform: translate(-50%, -50%);">
+                    <div class="relative flex items-center justify-center animate-sparkle-gleam" style="--sparkle-dur: 2.4s; --sparkle-delay: 0.5s; --sparkle-base: 36; width: 36px; height: 36px;">
+                      <svg viewBox="0 0 100 100" fill="none" class="w-full h-full drop-shadow-[0_0_14px_rgba(255,255,255,1)]"><path d="M50 0 C50 32 68 50 100 50 C68 50 50 68 50 100 C50 68 32 50 0 50 C32 50 50 32 50 0 Z" fill="#ffffff"></path><path d="M50 20 C50 40 60 50 80 50 C60 50 50 60 50 80 C50 60 40 50 20 50 C40 50 50 40 50 20 Z" fill="#ffffff" opacity="0.6" transform="rotate(45 50 50)"></path></svg>
+                      <div class="absolute w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_12px_#ffffff]"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-[72vw] sm:w-[400px] md:w-[480px] lg:w-[560px] xl:w-[620px] 2xl:w-[680px] h-6 sm:h-8 bg-black/15 rounded-full blur-xl -mt-6 sm:-mt-8 pointer-events-none animate-shadow-hero"></div>
+              </div>
+
+              <!-- 主副標題間距 -->
+              <div class="original-hero-copy space-y-3.5 sm:space-y-5 md:space-y-6 -mt-6 sm:-mt-10 md:-mt-12 lg:-mt-16 z-20 relative">
+                <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-slate-900 tracking-[0.06em] sm:tracking-[0.08em] pl-[0.06em] sm:pl-[0.08em] font-sans drop-shadow-xs"><span class="">矯正前<span class="hero-title-comma">，</span>先看懂代價</span></h1>
+                <p class="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-slate-800 tracking-[0.08em] sm:tracking-[0.12em] pl-[0.08em] sm:pl-[0.12em]"><span class="">打造完美笑容的安心法則</span></p>
+              </div>
+            </div>
+
+            <button aria-label="捲動至內容" class="relative z-10 flex items-center justify-center p-2 text-slate-700/75 hover:text-slate-950 transition-colors pb-3 sm:pb-4 cursor-pointer group">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down w-6 h-6 sm:w-7 sm:h-7 animate-bounce transition-transform group-hover:translate-y-0.5" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+            </button>
+          </div>
+
+          <!-- 前言介紹區塊：大前言字級微調放大 -->
+          <div id="section-intro" class="pt-16 sm:pt-24 pb-20 sm:pb-28 bg-white">
+            <div class="intro-container mx-auto px-4 sm:px-6 transition-[max-width] duration-150" style="max-width: var(--editorial-container-width, 1024px);">
+              <div class="intro-heading text-center mb-8 sm:mb-10">
+                <h3 class="inline-block font-bold text-slate-700 text-xl sm:text-2xl md:text-[26px] tracking-wide pb-2 border-b-[3.5px] border-[#f59e0b] transition-all"><span class="">美麗的笑容，已成為現代人的必要投資？</span></h3>
+              </div>
+              <div class="intro-copy space-y-6 sm:space-y-7 text-slate-700 font-normal transition-all editorial-justify" style="font-size: clamp(16px, 2.9vw, 20px); line-height: 2; letter-spacing: 0.6px;">
+                <div><p class="type-normalized" data-type="lead">剛升國一的小育因門牙微凸，主動提出矯正，隱形牙套要價23萬元；謝媽媽的孩子8歲便接受隱形矯正，花了10多萬元。金曲歌后孫淑媚也分享變美經歷：拔了7顆牙、接受矯正。從孩子到成人，改造笑容帶動一門「燦笑」商機。衛福部「108～109年度兒童及青少年口腔健康調查」發現，每3名高中生，就有1人覺得自己需要矯正（33.7％）。</p></div>
+                <div><p class="type-normalized" data-type="lead">但變美之路也可能成為一場補救戰。29歲康小姐透過牙套廠商線上評估，再媒合牙科診所，一次付清12.4萬元、拔了4顆牙，卻等不到下一批隱形牙套。廠商與診所互踢皮球，她只能和其他病人組成自救會，為後續治療與求償奔波。</p></div>
+                <div><p class="type-normalized" data-type="lead">牙齒矯正是一段需要時間與金錢配合的醫療過程。隱形牙套和傳統矯正怎麼選？一定要拔牙嗎？費用、風險與後續維持該注意什麼？《康健》帶你看懂療程，找到適合自己的笑容改造計劃，降低消費風險。</p></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 區塊容器：5 大章節 -->
+        <div class="chapter-list bg-[#edf4fb] rounded-none pt-20 sm:pt-28 md:pt-36 pb-20 sm:pb-28 relative z-10 flex flex-col transition-all duration-150 shadow-none" style="gap: var(--editorial-section-gap, 56px);">
+          
+          <!-- 1. 矯正趨勢 (section-trends)：行內樣式確保上下內距切實撐開 -->
+          <section id="section-trends" class="px-4 sm:px-6 lg:px-8">
+            <div class="chapter-shell mx-auto bg-white rounded-[24px] sm:rounded-[44px] md:rounded-[48px] px-3.5 sm:px-10 md:px-12 transition-all duration-150 shadow-none" style="max-width: var(--editorial-card-width, 1280px); padding-top: clamp(60px, 6vw, 96px); padding-bottom: clamp(60px, 6vw, 96px);">
+              <div class="mx-auto px-2 sm:px-4 transition-all duration-150" style="max-width: var(--editorial-container-width, 1024px);">
+                <!-- 桌面版：黃線短一點 -->
+                <div class="shared-editorial">
+                  <div class="w-9 sm:w-10 h-2.5 sm:h-3 bg-[#ffb400] mx-auto mb-4 chapter-heading-accent"></div>
+                  <h2 class="type-normalized font-black text-[#1e4d9d] mb-5 font-sans leading-snug mx-auto transition-all" style="font-size: var(--editorial-title-size, 38px); letter-spacing: var(--editorial-title-spacing, 1.2px); text-align: var(--editorial-title-align, center);" data-type="chapter"><span class="">牙齒美學正夯！從咬合治療到笑容投資</span></h2>
+                  <div class="text-[#1e4d9d] mb-10 sm:mb-12 font-medium transition-all editorial-justify" style="font-size: var(--editorial-intro-size, 18px); line-height: var(--editorial-intro-line-height, 1.95); letter-spacing: var(--editorial-intro-spacing, 0.6px);"><p class="type-normalized " data-type="intro">牙齒矯正屬於全自費的牙科醫療，實際價格雖然依病例與治療計劃而異，但每次矯正幾乎平均為10萬元起跳。然而，矯正一口好牙依然是趨之若鶩。這樣的「燦笑經濟」能成形，也和30年來，家庭消費能力提升、健康意識抬頭密不可分。</p></div>
+                  <div class="tooth-stats grid grid-cols-2 sm:flex sm:flex-row items-center justify-center mx-auto mb-10 sm:mb-14 gap-2.5 sm:gap-4" style="max-width: calc(1500px);">
+                    <div class="relative aspect-[1016/893] w-full mx-auto group" style="max-width: 750px;">
+                      <img alt="牙科自費療程關注度" class="w-full h-full object-contain select-none pointer-events-none" src="./images/tooth.png">
+                      <div class="absolute inset-x-0 flex flex-col items-center px-1.5 sm:px-6 text-center select-none pointer-events-none transition-all duration-100" style="top: 22%;">
+                        <h3 class="type-normalized font-black text-[#1e4d9d] leading-tight text-center transition-all" style="font-size: clamp(11px, 2.35vw, 23.5px); letter-spacing: 1px;" data-type="chart-title">牙科自費療程關注度</h3>
+                        <p class="type-normalized text-[#1e5fa8] font-semibold tracking-wide mt-0.5 sm:mt-1 transition-all" style="font-size: clamp(9px, 1.6vw, 15px);" data-type="chart-caption">矯正、隱形矯正、美白占</p>
+                        <div class="relative inline-flex items-baseline justify-center mt-0.5 sm:mt-1.5">
+                          <div class="flex items-baseline justify-center gap-0.5 sm:gap-1">
+                            <span data-stat-counter="aesthetic" data-target="38" data-decimals="0" class="font-black text-[#1e4d9d] font-montserrat-alt tracking-tight leading-none transition-all" style="font-size: clamp(24px, 5.8vw, 88px);">38</span>
+                            <div class="relative inline-flex items-baseline">
+                              <span class="font-black text-[#1e4d9d] font-montserrat-alt leading-none" style="font-size: clamp(12px, 2.7vw, 40px);">%</span>
+                              <span class="absolute left-full bottom-0 ml-1 sm:ml-1.5 font-normal text-[#1e4d9d] whitespace-nowrap leading-none" style="font-size: clamp(9px, 1.1vw, 13px); transform: translateY(-2px);">註1</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="relative aspect-[1016/893] w-full mx-auto group" style="max-width: 750px;">
+                      <img alt="受訪45歲以上民眾" class="w-full h-full object-contain select-none pointer-events-none" src="./images/tooth.png">
+                      <div class="absolute inset-x-0 flex flex-col items-center px-1.5 sm:px-6 text-center select-none pointer-events-none transition-all duration-100" style="top: 22%;">
+                        <h3 class="type-normalized font-black text-[#1e4d9d] leading-tight text-center transition-all" style="font-size: clamp(11px, 2.35vw, 23.5px); letter-spacing: 1px;" data-type="chart-title">受訪45歲以上民眾</h3>
+                        <p class="type-normalized text-[#1e5fa8] font-semibold tracking-wide mt-0.5 sm:mt-1 transition-all" style="font-size: clamp(9px, 1.6vw, 15px);" data-type="chart-caption">45 歲以上近 2 年矯正者佔</p>
+                        <div class="relative inline-flex items-baseline justify-center mt-0.5 sm:mt-1.5">
+                          <div class="flex items-baseline justify-center gap-0.5 sm:gap-1">
+                            <span data-stat-counter="adult-ortho" data-target="10" data-decimals="0" class="font-black text-[#1e4d9d] font-montserrat-alt tracking-tight leading-none transition-all" style="font-size: clamp(24px, 5.8vw, 88px);">10</span>
+                            <div class="relative inline-flex items-baseline">
+                              <span class="font-black text-[#1e4d9d] font-montserrat-alt leading-none" style="font-size: clamp(12px, 2.7vw, 40px);">%</span>
+                              <span class="absolute left-full bottom-0 ml-1 sm:ml-1.5 font-normal text-[#1e4d9d] whitespace-nowrap leading-none" style="font-size: clamp(9px, 1.1vw, 13px); transform: translateY(-2px);">註2</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-8 sm:mb-10 px-1"><p class="type-normalized text-[#1e4d9d] font-medium transition-all editorial-justify" style="font-size: clamp(15px, 2.8vw, var(--editorial-intro-size, 18px)); line-height: var(--editorial-intro-line-height, 1.95); letter-spacing: var(--editorial-intro-spacing, 0.6px);" data-type="intro">30 年來，家庭消費能力提升，醫療保健支出增加，為「燦笑經濟」提供發展條件。牙醫診所數量也持續增加，反映市場的擴大。</p></div>
+                  
+                  <!-- 卡片 1：移除右上自調按鈕 -->
+                  <div class="bg-white relative transition-all mb-8 group trend-card-adaptive" style="--desktop-border-thickness: 15.5px; border-width: var(--card-border-thickness, 2px); border-color: rgb(30, 77, 157); border-style: solid; border-radius: clamp(16px, 4vw, 20px);">
+                    <div class="flex items-start justify-between">
+                      <div class="type-normalized inline-flex items-center justify-center bg-[#1e4d9d] text-white font-black tracking-wide transition-all shadow-none" style="font-size: clamp(12px, 3.4vw, 28px); padding: 10px clamp(12px, 3.2vw, 48px) 12px; line-height: 1.25; margin-top: calc(-1 * var(--card-border-thickness, 2px)); margin-left: calc(-1 * var(--card-border-thickness, 2px)); border-radius: clamp(16px, 4vw, 20px) 0px 24px; max-width: calc(100% - 24px); box-sizing: border-box;" data-type="subsection">平均每戶家庭 <span class="trend-label-year"><span class="trend-label-numerals">1</span> 年</span>醫療保健支出</div>
+                    </div>
+                    <div class="px-3.5 sm:px-10 transition-all" style="padding-top: 0px; padding-bottom: 0px;">
+                      <div class="grid grid-cols-1 sm:grid-cols-2 items-center gap-4 sm:gap-8">
+                        <div class="flex justify-center items-center order-1"><img alt="家庭醫療保健支出插圖" class="object-contain w-36 h-36 sm:w-auto sm:h-auto max-w-[150px] sm:max-w-full transition-all select-none" src="./images/family.png" style="width: 320px; height: 320px;"></div>
+                        <div class="flex flex-col justify-center order-2">
+                          <div class="space-y-4 sm:pl-4">
+                            <div class="flex flex-row flex-nowrap items-center gap-2.5 sm:gap-3.5 whitespace-nowrap"><span class="rounded-full bg-[#1e4d9d] text-white font-black font-montserrat-alt flex items-center justify-center shrink-0 shadow-none self-center" style="width: 62px; height: 62px; font-size: 19px;">1996</span><div class="flex items-end flex-nowrap shrink-0"><span data-stat-counter="expenditure-from" data-target="5.7" data-decimals="1" class="font-black text-[#1e4d9d] font-montserrat-alt leading-none transition-all cursor-pointer hover:opacity-85" style="font-size: 72.5px; letter-spacing: 3px; transform: translateY(0px);">5.7</span><span class="font-black text-[#1e4d9d] leading-none ml-1.5 transition-all self-end cursor-pointer hover:opacity-85" style="font-size: 40px; margin-bottom: 9px;">萬</span><div class="inline-flex items-center justify-center text-[#ffb400] shrink-0 ml-2 transition-all self-end cursor-pointer hover:scale-110 active:scale-95" style="width: 71px; height: 71px; transform: translateY(-4px);"><svg viewBox="0 0 100 100" fill="currentColor" class="w-full h-full"><polygon points="7,71 35,43 26,34 76,24 66,74 57,65 29,93" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"></polygon></svg></div></div></div>
+                            <div class="flex flex-row flex-nowrap items-center gap-2.5 sm:gap-3.5 whitespace-nowrap"><span class="rounded-full bg-[#ffb400] text-white font-black font-montserrat-alt flex items-center justify-center shrink-0 shadow-none self-center" style="width: 62px; height: 62px; font-size: 19px;">2025</span><div class="flex items-end flex-nowrap shrink-0"><span data-stat-counter="expenditure-to" data-target="13" data-decimals="0" class="font-black text-[#ffb400] font-montserrat-alt leading-none transition-all cursor-pointer hover:opacity-85" style="font-size: 106px; letter-spacing: 3px; transform: translateY(0px);">13</span><span class="font-black text-[#ffb400] leading-none ml-1.5 transition-all self-end cursor-pointer hover:opacity-85" style="font-size: 40px; margin-bottom: 15px;">萬</span></div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 卡片 2：移除右上自調按鈕 -->
+                  <div class="bg-white relative transition-all mb-8 group trend-card-adaptive" style="--desktop-border-thickness: 15.5px; border-width: var(--card-border-thickness, 2px); border-color: rgb(30, 77, 157); border-style: solid; border-radius: clamp(16px, 4vw, 20px);">
+                    <div class="flex items-start justify-between">
+                      <div class="type-normalized inline-flex items-center justify-center bg-[#1e4d9d] text-white font-black tracking-wide transition-all shadow-none text-center" style="font-size: clamp(12px, 3.4vw, 28px); padding: 10px clamp(12px, 3.2vw, 48px) 12px; line-height: 1.25; margin-top: calc(-1 * var(--card-border-thickness, 2px)); margin-left: calc(-1 * var(--card-border-thickness, 2px)); border-radius: clamp(16px, 4vw, 20px) 0px 24px; max-width: calc(100% - 24px); box-sizing: border-box; width: 482px; min-width: 482px;" data-type="subsection">全台牙醫診所數量接近 <span class="trend-label-numerals">7-11</span><span class="trend-note-marker">註3</span></div>
+                    </div>
+                    <div class="px-3.5 sm:px-10 transition-all" style="padding-top: 0px; padding-bottom: 0px;">
+                      <div class="grid grid-cols-1 sm:grid-cols-2 items-center gap-4 sm:gap-6">
+                        <div class="flex justify-center sm:justify-end items-center transition-all order-2" style="transform: translate(6px, -10px);"><img alt="全台牙醫診所數量插圖" class="object-contain w-36 h-36 sm:w-auto sm:h-auto max-w-[150px] sm:max-w-full transition-all select-none" src="./images/clinic.png" style="width: 320px; height: 320px;"></div>
+                        <div class="flex flex-col justify-center order-1">
+                          <div class="space-y-4 sm:pl-4">
+                            <div class="flex flex-row flex-nowrap items-center gap-2.5 sm:gap-3.5 whitespace-nowrap"><span class="rounded-full bg-[#1e4d9d] text-white font-black font-montserrat-alt flex items-center justify-center shrink-0 shadow-none self-center" style="width: 62px; height: 62px; font-size: 19px;">1996</span><div class="flex items-end flex-nowrap shrink-0"><span data-stat-counter="clinic-from" data-target="6665" data-decimals="0" class="font-black text-[#1e4d9d] font-montserrat-alt leading-none transition-all cursor-pointer hover:opacity-85" style="font-size: 72.5px; letter-spacing: 3px; transform: translateY(0px);">6<span class="stat-comma">,</span>665</span><span class="font-black text-[#1e4d9d] leading-none ml-1.5 transition-all self-end cursor-pointer hover:opacity-85" style="font-size: 40px; margin-bottom: 9px;">家</span><div class="inline-flex items-center justify-center text-[#ffb400] shrink-0 ml-2 transition-all self-end cursor-pointer hover:scale-110 active:scale-95" style="width: 71px; height: 71px; transform: translateY(-4px);"><svg viewBox="0 0 100 100" fill="currentColor" class="w-full h-full"><polygon points="7,71 35,43 26,34 76,24 66,74 57,65 29,93" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"></polygon></svg></div></div></div>
+                            <div class="flex flex-row flex-nowrap items-center gap-2.5 sm:gap-3.5 whitespace-nowrap"><span class="rounded-full bg-[#ffb400] text-white font-black font-montserrat-alt flex items-center justify-center shrink-0 shadow-none self-center" style="width: 62px; height: 62px; font-size: 19px;">2025</span><div class="flex items-end flex-nowrap shrink-0"><span data-stat-counter="clinic-to" data-target="7128" data-decimals="0" class="font-black text-[#ffb400] font-montserrat-alt leading-none transition-all cursor-pointer hover:opacity-85" style="font-size: 106px; letter-spacing: 3px; transform: translateY(0px);">7<span class="stat-comma">,</span>128</span><span class="font-black text-[#ffb400] leading-none ml-1.5 transition-all self-end cursor-pointer hover:opacity-85" style="font-size: 40px; margin-bottom: 15px;">家</span></div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 註釋：往上移靠近上面的框 -->
+                <div class="trend-notes max-w-5xl mx-auto space-y-1.5 -mt-3 sm:-mt-2 pt-0 text-[11px] sm:text-xs text-[#1e4d9d]/80 font-medium tracking-[0.02em]">
+                  <p class="type-normalized " data-type="note">註 1: 數位新媒體「台灣好醫生」2026 年第 1 季牙科自費療程網路關注度調查。</p>
+                  <p class="type-normalized " data-type="note">註 2: 翔評互動（AlleyPin）針對 618 名 45 歲以上民眾的調查。</p>
+                  <p class="type-normalized " data-type="note">註 3: 統一超商《2026 Q1 財務簡報》：2025 年 7-ELEVEN 共 7,248 家。</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 2. 自我評估 (section-assessment)：行內樣式確保上下內距切實撐開 -->
+          <section id="section-assessment" class="px-3 sm:px-6 lg:px-8">
+            <div class="chapter-shell mx-auto bg-white rounded-[24px] sm:rounded-[44px] md:rounded-[48px] px-3.5 sm:px-10 md:px-12 transition-all duration-150 shadow-none" style="max-width: var(--editorial-card-width, 1280px); padding-top: clamp(60px, 6vw, 96px); padding-bottom: clamp(60px, 6vw, 96px);">
+              <div class="mx-auto px-1 sm:px-4 transition-all duration-150 relative" style="max-width: var(--editorial-container-width, 1024px);">
+                
+                <!-- 桌面版：單獨前言居中、先天型後天型底線拿掉、距離適度微調 mb-4 sm:mb-4.5 -->
+                <div class="shared-editorial">
+                  <div class="w-9 sm:w-10 h-2.5 sm:h-3 bg-[#ffb400] mx-auto mb-4 chapter-heading-accent"></div>
+                  <h2 class="type-normalized font-black text-[#1e4d9d] text-center mb-3 font-sans leading-snug mx-auto transition-all" style="font-size: var(--editorial-title-size, 36px); letter-spacing: var(--editorial-title-spacing, 1.2px);" data-type="chapter"><span>牙齒不整齊就要矯正嗎？</span><span class="inline-flex items-baseline"><span class="font-sans font-black text-[1.22em] leading-none inline-block px-[0.5px] transform translate-y-[2.5px]" style="font-weight: 900;">8</span><span>種適用矯正族群</span></span></h2>
+                  
+                  <!-- 單獨區塊2桌面版前言居中 -->
+                  <p class="type-normalized text-[#1e4d9d] mb-10 sm:mb-12 font-medium transition-all text-center mx-auto max-w-2xl assessment-population-intro" style="font-size: var(--editorial-intro-size, 18px); line-height: var(--editorial-intro-line-height, 1.95); letter-spacing: var(--editorial-intro-spacing, 0.6px);" data-type="intro">齒列與咬合異常可能影響咀嚼。適合矯正的常見情形包括：</p>
+                  
+                  <!-- 先天型：底線移除、與下方卡片距離適中 mb-4 sm:mb-4.5 -->
+                  <div class="mb-10 sm:mb-14 text-center">
+                    <div class="text-center mb-4 sm:mb-4.5"><h3 class="type-normalized font-black text-[#1e4d9d] pb-1 tracking-[0.05em] pl-[0.05em] inline-block leading-snug transition-all" style="font-size: 30px;" data-type="subsection">先天型</h3></div>
+                    <div class="flip-grid grid grid-cols-2 md:grid-cols-4 transition-all" style="gap: 15px;">
+                      <div data-flip-card="true" class="perspective-1000 w-full cursor-pointer select-none group relative transition-all" style="min-height: 225px; height: 225px;"><div class="relative w-full h-full transition-transform duration-600 transform-style-3d" style="border-radius: 18px;"><div class="absolute inset-0 w-full h-full backface-hidden flip-front bg-[#1e4d9d] hover:bg-[#183e7f] text-white p-3 sm:p-4.5 flex flex-col items-center justify-between transition-colors overflow-hidden border border-blue-400/20 shadow-none" style="border-radius: 18px;"><div class="w-full flex-1 flex items-center justify-center p-1 pointer-events-none"><img alt="牙齒形狀 排列異常" class="w-auto max-w-full object-contain select-none transition-all" src="./images/congenital1.png" style="max-height: clamp(75px, 18vw, 110px);"></div><div class="w-full pb-1 sm:pb-2 text-center px-1"><h4 class="text-white font-black leading-tight tracking-wide whitespace-pre-line transition-all" style="font-size: clamp(15px, 4vw, 22px);">牙齒形狀<br class="flip-front-title-break">排列異常</h4></div><div class="absolute bottom-2.5 right-2 flex items-center justify-center text-white/95 select-none pointer-events-none transition-all py-1 px-1 rounded-md bg-black/30 backdrop-blur-[2px] z-10 shadow-none flip-card-hint" title="點擊卡片可翻面" style="font-size: 9px; writing-mode: vertical-rl; letter-spacing: 2px; line-height: 1.25;"><span class="font-extrabold">點擊翻面</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-cw w-2.5 h-2.5 opacity-85 mt-1" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path></svg></div></div><div class="absolute inset-0 w-full h-full backface-hidden flip-back rotate-y-180 bg-[#ffb400] text-white p-2.5 sm:p-4 flex flex-col items-center overflow-hidden border border-amber-300/50 shadow-none" style="border-radius: 18px;"><div class="w-full h-[64px] sm:h-[88px] flex flex-col justify-end items-center text-center px-1 pb-1.5 sm:pb-2 shrink-0"><h4 class="font-black text-white leading-snug tracking-wide whitespace-pre-line transition-all" style="font-size: clamp(15px, 4.2vw, 20px);">牙齒形狀<br class="flip-back-title-break">排列異常</h4></div><div class="w-[84%] mx-auto shrink-0 my-0"><div class="w-full block" style="height: 0px; border-top: 2.5px solid rgb(255, 255, 255); opacity: 1; transform: translateZ(0px);"></div></div><div class="w-[88%] sm:w-[84%] mx-auto flex-1 flex items-start justify-center pt-2 sm:pt-4 overflow-y-auto"><p class="type-normalized w-full text-white font-bold leading-relaxed tracking-wide transition-all text-left" style="font-size: clamp(12.5px, 3.5vw, 15px);" data-type="compact">齒形異常、齒列擁擠、牙縫過大</p></div><div class="absolute bottom-2.5 right-2 opacity-50 hover:opacity-80 transition-opacity z-10 pointer-events-none"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-cw w-3.5 h-3.5 text-white" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path></svg></div></div></div></div>
+                      <div data-flip-card="true" class="perspective-1000 w-full cursor-pointer select-none group relative transition-all" style="min-height: 225px; height: 225px;"><div class="relative w-full h-full transition-transform duration-600 transform-style-3d" style="border-radius: 18px;"><div class="absolute inset-0 w-full h-full backface-hidden flip-front bg-[#1e4d9d] hover:bg-[#183e7f] text-white p-3 sm:p-4.5 flex flex-col items-center justify-between transition-colors overflow-hidden border border-blue-400/20 shadow-none" style="border-radius: 18px;"><div class="w-full flex-1 flex items-center justify-center p-1 pointer-events-none"><img alt="上下 咬合不正" class="w-auto max-w-full object-contain select-none transition-all" src="./images/congenital2.png" style="max-height: clamp(75px, 18vw, 110px);"></div><div class="w-full pb-1 sm:pb-2 text-center px-1"><h4 class="text-white font-black leading-tight tracking-wide whitespace-pre-line transition-all" style="font-size: clamp(15px, 4vw, 22px);">上下<br class="flip-front-title-break">咬合不正</h4></div></div><div class="absolute inset-0 w-full h-full backface-hidden flip-back rotate-y-180 bg-[#ffb400] text-white p-2.5 sm:p-4 flex flex-col items-center overflow-hidden border border-amber-300/50 shadow-none" style="border-radius: 18px;"><div class="w-full h-[64px] sm:h-[88px] flex flex-col justify-end items-center text-center px-1 pb-1.5 sm:pb-2 shrink-0"><h4 class="font-black text-white leading-snug tracking-wide whitespace-pre-line transition-all" style="font-size: clamp(15px, 4.2vw, 20px);">上下<br class="flip-back-title-break">咬合不正</h4></div><div class="w-[84%] mx-auto shrink-0 my-0"><div class="w-full block" style="height: 0px; border-top: 2.5px solid rgb(255, 255, 255); opacity: 1; transform: translateZ(0px);"></div></div><div class="w-[88%] sm:w-[84%] mx-auto flex-1 flex items-start justify-center pt-2 sm:pt-4 overflow-y-auto"><p class="type-normalized w-full text-white font-bold leading-relaxed tracking-wide transition-all text-center" style="font-size: clamp(12.5px, 3.5vw, 15px);" data-type="compact">開咬、深咬、倒咬</p></div></div></div></div>
+                      <div data-flip-card="true" class="perspective-1000 w-full cursor-pointer select-none group relative transition-all" style="min-height: 225px; height: 225px;"><div class="relative w-full h-full transition-transform duration-600 transform-style-3d" style="border-radius: 18px;"><div class="absolute inset-0 w-full h-full backface-hidden flip-front bg-[#1e4d9d] hover:bg-[#183e7f] text-white p-3 sm:p-4.5 flex flex-col items-center justify-between transition-colors overflow-hidden border border-blue-400/20 shadow-none" style="border-radius: 18px;"><div class="w-full flex-1 flex items-center justify-center p-1 pointer-events-none"><img alt="牙齒或 上下顎過突" class="w-auto max-w-full object-contain select-none transition-all" src="./images/congenital3.png" style="max-height: clamp(75px, 18vw, 110px);"></div><div class="w-full pb-1 sm:pb-2 text-center px-1"><h4 class="text-white font-black leading-tight tracking-wide whitespace-pre-line transition-all" style="font-size: clamp(15px, 4vw, 22px);">牙齒或<br class="flip-front-title-break">上下顎過突</h4></div></div><div class="absolute inset-0 w-full h-full backface-hidden flip-back rotate-y-180 bg-[#ffb400] text-white p-2.5 sm:p-4 flex flex-col items-center overflow-hidden border border-amber-300/50 shadow-none" style="border-radius: 18px;"><div class="w-full h-[64px] sm:h-[88px] flex flex-col justify-end items-center text-center px-1 pb-1.5 sm:pb-2 shrink-0"><h4 class="font-black text-white leading-snug tracking-wide whitespace-pre-line transition-all" style="font-size: clamp(15px, 4.2vw, 20px);">牙齒或<br class="flip-back-title-break">上下顎過突</h4></div><div class="w-[84%] mx-auto shrink-0 my-0"><div class="w-full block" style="height: 0px; border-top: 2.5px solid rgb(255, 255, 255); opacity: 1; transform: translateZ(0px);"></div></div><div class="w-[88%] sm:w-[84%] mx-auto flex-1 flex items-start justify-center pt-2 sm:pt-4 overflow-y-auto"><p class="type-normalized w-full text-white font-bold leading-relaxed tracking-wide transition-all text-center" style="font-size: clamp(12.5px, 3.5vw, 15px);" data-type="compact">暴牙、戽斗</p></div></div></div></div>
+                      <div data-flip-card="true" class="perspective-1000 w-full cursor-pointer select-none group relative transition-all" style="min-height: 225px; height: 225px;"><div class="relative w-full h-full transition-transform duration-600 transform-style-3d" style="border-radius: 18px;"><div class="absolute inset-0 w-full h-full backface-hidden flip-front bg-[#1e4d9d] hover:bg-[#183e7f] text-white p-3 sm:p-4.5 flex flex-col items-center justify-between transition-colors overflow-hidden border border-blue-400/20 shadow-none" style="border-radius: 18px;"><div class="w-full flex-1 flex items-center justify-center p-1 pointer-events-none"><img alt="顎骨與 顱顏異常" class="w-auto max-w-full object-contain select-none transition-all" src="./images/congenital4.png" style="max-height: clamp(75px, 18vw, 110px);"></div><div class="w-full pb-1 sm:pb-2 text-center px-1"><h4 class="text-white font-black leading-tight tracking-wide whitespace-pre-line transition-all" style="font-size: clamp(15px, 4vw, 22px);">顎骨與<br class="flip-front-title-break">顱顏異常</h4></div></div><div class="absolute inset-0 w-full h-full backface-hidden flip-back rotate-y-180 bg-[#ffb400] text-white p-2.5 sm:p-4 flex flex-col items-center overflow-hidden border border-amber-300/50 shadow-none" style="border-radius: 18px;"><div class="w-full h-[64px] sm:h-[88px] flex flex-col justify-end items-center text-center px-1 pb-1.5 sm:pb-2 shrink-0"><h4 class="font-black text-white leading-snug tracking-wide whitespace-pre-line transition-all" style="font-size: clamp(15px, 4.2vw, 20px);">顎骨與<br class="flip-back-title-break">顱顏異常</h4></div><div class="w-[82%] mx-auto h-[1.2px] bg-white/95 shrink-0"></div><div class="w-full h-[54%] flex flex-col justify-start items-center px-2 pt-2 pb-2 overflow-y-auto"><div class="w-[84%] mx-auto text-left"><p class="type-normalized text-[13px] sm:text-[14px] font-bold text-white leading-relaxed text-left" data-type="compact">顎骨發育異常、牙弓塌陷、顏面歪斜、小耳症、唇顎裂</p></div></div></div></div></div>
+                    </div>
+                  </div>
+
+                  <!-- 後天型：底線移除、與下方卡片距離適中 mb-4 sm:mb-4.5 -->
+                  <div class="mb-14 sm:mb-20 text-center">
+                    <div class="text-center mb-4 sm:mb-4.5"><h3 class="type-normalized font-black text-[#1e4d9d] pb-1 tracking-[0.05em] pl-[0.05em] inline-block leading-snug transition-all" style="font-size: 30px;" data-type="subsection">後天型</h3></div>
+                    <div class="flip-grid grid grid-cols-2 md:grid-cols-4 transition-all" style="gap: 15px;">
+                      <div data-flip-card="true" class="perspective-1000 w-full cursor-pointer select-none group relative transition-all" style="min-height: 225px; height: 225px;"><div class="relative w-full h-full duration-500 transform-style-3d transition-transform" style="border-radius: 18px;"><div class="absolute inset-0 w-full h-full backface-hidden flip-front bg-[#1e4d9d] hover:bg-[#183e7f] text-white p-3 sm:p-4.5 flex flex-col items-center justify-between transition-colors overflow-hidden border border-blue-400/20 shadow-none" style="border-radius: 18px;"><div class="w-full flex-1 flex items-center justify-center p-1 pointer-events-none"><img alt="意外創傷" class="w-auto max-w-full object-contain select-none transition-all" src="./images/acquired1-v2.png" style="max-height: clamp(75px, 18vw, 110px);"></div><div class="w-full pb-1 sm:pb-2 text-center px-1"><h4 class="text-white font-black leading-tight tracking-wide whitespace-pre-line transition-all" style="font-size: clamp(15px, 4vw, 22px);">意外創傷</h4></div><div class="absolute bottom-2.5 right-2 flex items-center justify-center text-white/95 select-none pointer-events-none transition-all py-1 px-1 rounded-md bg-black/30 backdrop-blur-[2px] z-10 shadow-none flip-card-hint flip-card-hint-mobile" title="點擊卡片可翻面" style="font-size: 9px; writing-mode: vertical-rl; letter-spacing: 2px; line-height: 1.25;"><span class="font-extrabold">點擊翻面</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-cw w-2.5 h-2.5 opacity-85 mt-1" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path></svg></div></div><div class="absolute inset-0 w-full h-full backface-hidden flip-back rotate-y-180 bg-[#ffb400] text-white p-2.5 sm:p-4 flex flex-col items-center overflow-hidden border border-amber-300/50 shadow-none" style="border-radius: 18px;"><div class="w-full h-[64px] sm:h-[88px] flex flex-col justify-end items-center text-center px-1 pb-1.5 sm:pb-2 shrink-0"><h4 class="font-black text-white leading-snug tracking-wide whitespace-pre-line transition-all" style="font-size: clamp(15px, 4.2vw, 20px);">意外創傷</h4></div><div class="w-[84%] mx-auto shrink-0 my-0"><div class="w-full block" style="height: 0px; border-top: 2.5px solid rgb(255, 255, 255); opacity: 1; transform: translateZ(0px);"></div></div><div class="w-[88%] sm:w-[84%] mx-auto flex-1 flex items-start justify-center pt-2 sm:pt-4 overflow-y-auto"><p class="type-normalized w-full text-white font-bold leading-relaxed tracking-wide transition-all text-center" style="font-size: clamp(12.5px, 3.5vw, 15px);" data-type="compact">牙齒或咬合改變</p></div><div class="absolute bottom-2.5 right-2 opacity-50 hover:opacity-80 transition-opacity z-10 pointer-events-none flip-back-hint-mobile"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-cw w-3.5 h-3.5 text-white" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path></svg></div></div></div></div>
+                      <div data-flip-card="true" class="perspective-1000 w-full cursor-pointer select-none group relative transition-all" style="min-height: 225px; height: 225px;"><div class="relative w-full h-full border-box transition-transform duration-600 transform-style-3d" style="border-radius: 18px;"><div class="absolute inset-0 w-full h-full backface-hidden flip-front bg-[#1e4d9d] hover:bg-[#183e7f] text-white p-3 sm:p-4.5 flex flex-col items-center justify-between transition-colors overflow-hidden border border-blue-400/20 shadow-none" style="border-radius: 18px;"><div class="w-full flex-1 flex items-center justify-center p-1 pointer-events-none"><img alt="乳牙蛀蝕" class="w-auto max-w-full object-contain select-none transition-all" src="./images/acquired2.png" style="max-height: clamp(75px, 18vw, 110px);"></div><div class="w-full pb-1 sm:pb-2 text-center px-1"><h4 class="text-white font-black leading-tight tracking-wide whitespace-pre-line transition-all" style="font-size: clamp(15px, 4vw, 22px);">乳牙蛀蝕</h4></div></div><div class="absolute inset-0 w-full h-full backface-hidden flip-back rotate-y-180 bg-[#ffb400] text-white p-2.5 sm:p-4 flex flex-col items-center overflow-hidden border border-amber-300/50 shadow-none" style="border-radius: 18px;"><div class="w-full h-[64px] sm:h-[88px] flex flex-col justify-end items-center text-center px-1 pb-1.5 sm:pb-2 shrink-0"><h4 class="font-black text-white leading-snug tracking-wide whitespace-pre-line transition-all" style="font-size: clamp(15px, 4.2vw, 20px);">乳牙蛀蝕</h4></div><div class="w-[84%] mx-auto shrink-0 my-0"><div class="w-full block" style="height: 0px; border-top: 2.5px solid rgb(255, 255, 255); opacity: 1; transform: translateZ(0px);"></div></div><div class="w-[88%] sm:w-[84%] mx-auto flex-1 flex items-start justify-center pt-2 sm:pt-4 overflow-y-auto"><p class="type-normalized w-full text-white font-bold leading-relaxed tracking-wide transition-all text-center" style="font-size: clamp(12.5px, 3.5vw, 15px);" data-type="compact">恆牙萌發位置異常</p></div></div></div></div>
+                      <div data-flip-card="true" class="perspective-1000 w-full cursor-pointer select-none group relative transition-all" style="min-height: 225px; height: 225px;"><div class="relative w-full h-full transition-transform duration-600 transform-style-3d" style="border-radius: 18px;"><div class="absolute inset-0 w-full h-full backface-hidden flip-front bg-[#1e4d9d] hover:bg-[#183e7f] text-white p-3 sm:p-4.5 flex flex-col items-center justify-between transition-colors overflow-hidden border border-blue-400/20 shadow-none" style="border-radius: 18px;"><div class="w-full flex-1 flex items-center justify-center p-1 pointer-events-none"><img alt="缺牙未補、 牙周病" class="w-auto max-w-full object-contain select-none transition-all" src="./images/acquired3.png" style="max-height: clamp(75px, 18vw, 110px);"></div><div class="w-full pb-1 sm:pb-2 text-center px-1"><h4 class="text-white font-black leading-tight tracking-wide whitespace-pre-line transition-all" style="font-size: clamp(15px, 4vw, 22px);">缺牙未補、<br class="flip-front-title-break">牙周病</h4></div></div><div class="absolute inset-0 w-full h-full backface-hidden flip-back rotate-y-180 bg-[#ffb400] text-white p-2.5 sm:p-4 flex flex-col items-center overflow-hidden border border-amber-300/50 shadow-none" style="border-radius: 18px;"><div class="w-full h-[64px] sm:h-[88px] flex flex-col justify-end items-center text-center px-1 pb-1.5 sm:pb-2 shrink-0"><h4 class="font-black text-white leading-snug tracking-wide whitespace-pre-line transition-all" style="font-size: clamp(15px, 4.2vw, 20px);">缺牙未補、<br class="flip-back-title-break">牙周病</h4></div><div class="w-[84%] mx-auto shrink-0 my-0"><div class="w-full block" style="height: 0px; border-top: 2.5px solid rgb(255, 255, 255); opacity: 1; transform: translateZ(0px);"></div></div><div class="w-[88%] sm:w-[84%] mx-auto flex-1 flex items-start justify-center pt-2 sm:pt-4 overflow-y-auto"><p class="type-normalized w-full text-white font-bold leading-relaxed tracking-wide transition-all text-center" style="font-size: clamp(12.5px, 3.5vw, 15px);" data-type="compact">齒列或咬合改變</p></div></div></div></div>
+                      <div data-flip-card="true" class="perspective-1000 w-full cursor-pointer select-none group relative transition-all" style="min-height: 225px; height: 225px;"><div class="relative w-full h-full transition-transform duration-600 transform-style-3d" style="border-radius: 18px;"><div class="absolute inset-0 w-full h-full backface-hidden flip-front bg-[#1e4d9d] hover:bg-[#183e7f] text-white p-3 sm:p-4.5 flex flex-col items-center justify-between transition-colors overflow-hidden border border-blue-400/20 shadow-none" style="border-radius: 18px;"><div class="w-full flex-1 flex items-center justify-center p-1 pointer-events-none"><img alt="長期吸吮 拇指、奶嘴" class="w-auto max-w-full object-contain select-none transition-all" src="./images/acquired4.png" style="max-height: clamp(75px, 18vw, 110px);"></div><div class="w-full pb-1 sm:pb-2 text-center px-1"><h4 class="text-white font-black leading-tight tracking-wide whitespace-pre-line transition-all" style="font-size: clamp(15px, 4vw, 22px);">長期吸吮<br class="flip-front-title-break">拇指、奶嘴</h4></div></div><div class="absolute inset-0 w-full h-full backface-hidden flip-back rotate-y-180 bg-[#ffb400] text-white p-2.5 sm:p-4 flex flex-col items-center overflow-hidden border border-amber-300/50 shadow-none" style="border-radius: 18px;"><div class="w-full h-[64px] sm:h-[88px] flex flex-col justify-end items-center text-center px-1 pb-1.5 sm:pb-2 shrink-0"><h4 class="font-black text-white leading-snug tracking-wide whitespace-pre-line transition-all" style="font-size: clamp(15px, 4.2vw, 20px);">長期吸吮<br class="flip-back-title-break">拇指、奶嘴</h4></div><div class="w-[84%] mx-auto shrink-0 my-0"><div class="w-full block" style="height: 0px; border-top: 2.5px solid rgb(255, 255, 255); opacity: 1; transform: translateZ(0px);"></div></div><div class="w-[88%] sm:w-[84%] mx-auto flex-1 flex items-start justify-center pt-2 sm:pt-4 overflow-y-auto"><p class="type-normalized w-full text-white font-bold leading-relaxed tracking-wide transition-all text-center" style="font-size: clamp(12.5px, 3.5vw, 15px);" data-type="compact">影響齒列發育</p></div></div></div></div>
+                    </div>
+                  </div>
+
+                  <!-- 桌面版 Carousel 控制區塊（含左右切換按鈕與卡片本體） -->
+                  <div class="assessment-carousel relative w-full transition-all" style="margin-top: clamp(54px, 14vw, 180px);">
+                    <!-- 左切換按鈕 -->
+                    <button data-slide-prev="true" type="button" class="hidden sm:flex w-11 h-11 sm:w-13 sm:h-13 rounded-full border-2 border-[#7eafe6] bg-white text-[#4a88d4] hover:border-[#1e4d9d] hover:text-[#1e4d9d] active:scale-95 transition-all items-center justify-center absolute -left-4 sm:-left-6 top-[46%] -translate-y-1/2 z-20 cursor-pointer shadow-none" title="切換至上一個評估檢查主題" aria-label="Previous slide">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left w-5 h-5 sm:w-6 sm:h-6 stroke-[2]" aria-hidden="true"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+                    </button>
+                    <!-- 右切換按鈕 -->
+                    <button data-slide-next="true" type="button" class="hidden sm:flex w-11 h-11 sm:w-13 sm:h-13 rounded-full border-2 border-[#7eafe6] bg-white text-[#4a88d4] hover:border-[#1e4d9d] hover:text-[#1e4d9d] active:scale-95 transition-all items-center justify-center absolute -right-4 sm:-right-6 top-[46%] -translate-y-1/2 z-20 cursor-pointer shadow-none" title="切換至下一個評估檢查主題" aria-label="Next slide">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-5 h-5 sm:w-6 sm:h-6 stroke-[2]" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </button>
+
+                    <!-- 卡片本體 -->
+                    <div class="assessment-card bg-white relative transition-all rounded-tr-[32px] sm:rounded-tr-[42px] rounded-b-[32px] sm:rounded-b-[42px] shadow-none trend-card-adaptive" style="--desktop-border-thickness: 15.5px; border-width: var(--card-border-thickness, 2px); border-color: rgb(30, 77, 157); border-style: solid; border-radius: 0px 38px 38px; padding: clamp(18px, 4.5vw, 52px) clamp(12px, 3.5vw, 60px);">
+                      <div class="absolute inline-flex items-center bg-[#1e4d9d] text-white font-black tracking-wide transition-all select-none shadow-none" style="bottom: calc(100% + var(--card-border-thickness, 2px) - 0.5px); left: calc(-1 * var(--card-border-thickness, 2px)); font-size: clamp(12px, 3.4vw, 28px); padding: 12px clamp(12px, 3.2vw, 48px) 10px; line-height: 1.25; border-radius: 32px 24px 0px 0px; max-width: calc(100% - 16px); z-index: 10;">
+                        <span data-assessment-badge-desktop="0" class="type-normalized translate-y-[2px] truncate inline-block" data-type="subsection">矯正前需要做哪些評估和檢查？</span>
+                        <span data-assessment-badge-desktop="1" class="type-normalized translate-y-[2px] truncate hidden" data-type="subsection">矯正一定需要拔牙？如何判斷？</span>
+                        <span data-assessment-badge-desktop="2" class="type-normalized translate-y-[2px] truncate hidden" data-type="subsection">牙齒矯正前先問清楚4件事</span>
+                        <div class="assessment-label-corner absolute left-full bottom-0 w-[28px] sm:w-[32px] h-[28px] sm:h-[32px] pointer-events-none" style="bottom: 0px;"><svg class="w-full h-full" viewBox="0 0 32 32" fill="none"><path d="M 0 0 C 0 17.67 14.33 32 32 32 L 0 32 Z" fill="#1e4d9d"></path></svg></div>
+                      </div>
+                      
+                      <!-- Slide 0: 檢查項目 -->
+                      <div data-assessment-slide-desktop="0" class="block">
+                        <div class="mb-6 sm:mb-8 text-left"><p class="type-normalized text-[#1e4d9d] font-medium text-left leading-relaxed transition-all" style="--assessment-original-size:23px;--assessment-original-weight:500;--assessment-original-leading:1.625;--assessment-original-spacing:normal;font-size: 23px;" data-type="body">牙齒矯正前須經過完整的檢查，作為診斷與治療計劃的依據，包括：</p></div>
+                        <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 relative">
+                          <ul class="flex-1 space-y-4 sm:space-y-5 text-left pb-2 md:pb-4">
+                            <li class="flex items-center group/item transition-all" style="gap: 11px;"><img alt="Check" class="object-contain shrink-0 select-none" src="./images/checklist-check.png" style="width: 32px; height: 32px;"><span class="type-normalized text-[#1e4d9d] font-black tracking-wide leading-snug transition-all" style="--assessment-original-size:clamp(14px, 3.8vw, 28px);--assessment-original-weight:900;--assessment-original-leading:1.375;--assessment-original-spacing:.025em;font-size: clamp(14px, 3.8vw, 28px);" data-type="emphasis">全口環景 X 光</span></li>
+                            <li class="flex items-center group/item transition-all" style="gap: 11px;"><img alt="Check" class="object-contain shrink-0 select-none" src="./images/checklist-check.png" style="width: 32px; height: 32px;"><span class="type-normalized text-[#1e4d9d] font-black tracking-wide leading-snug transition-all" style="--assessment-original-size:clamp(14px, 3.8vw, 28px);--assessment-original-weight:900;--assessment-original-leading:1.375;--assessment-original-spacing:.025em;font-size: clamp(14px, 3.8vw, 28px);" data-type="emphasis">側顱 X 光</span></li>
+                            <li class="flex items-center group/item transition-all" style="gap: 11px;"><img alt="Check" class="object-contain shrink-0 select-none" src="./images/checklist-check.png" style="width: 32px; height: 32px;"><span class="type-normalized text-[#1e4d9d] font-black tracking-wide leading-snug transition-all" style="--assessment-original-size:clamp(14px, 3.8vw, 28px);--assessment-original-weight:900;--assessment-original-leading:1.375;--assessment-original-spacing:.025em;font-size: clamp(14px, 3.8vw, 28px);" data-type="emphasis">口內外攝影、口內掃描</span></li>
+                            <li class="flex items-center group/item transition-all" style="gap: 11px;"><img alt="Check" class="object-contain shrink-0 select-none" src="./images/checklist-check.png" style="width: 32px; height: 32px;"><span class="type-normalized text-[#1e4d9d] font-black tracking-wide leading-snug transition-all" style="--assessment-original-size:clamp(14px, 3.8vw, 28px);--assessment-original-weight:900;--assessment-original-leading:1.375;--assessment-original-spacing:.025em;font-size: clamp(14px, 3.8vw, 28px);" data-type="emphasis">必要時評估顳顎關節、骨齡等</span></li>
+                          </ul>
+                          <div class="assessment-illustration shrink-0 self-end flex flex-col items-center justify-end relative group select-none max-w-[160px] sm:max-w-none" style="width: 265px; margin-bottom: -52px;">
+                            <img alt="評估與檢查X光影像" class="w-full h-auto max-h-[340px] object-contain object-bottom pointer-events-auto" src="./images/slide1-xray.jpg">
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Slide 1: 是否拔牙 -->
+                      <div data-assessment-slide-desktop="1" class="hidden">
+                        <div class="mb-6 sm:mb-8 text-left"><p class="type-normalized text-[#1e4d9d] font-medium text-left leading-relaxed transition-all" style="--assessment-original-size:23px;--assessment-original-weight:500;--assessment-original-leading:1.625;--assessment-original-spacing:normal;font-size: 23px;" data-type="body"><span class="text-[#dc2626] font-black mr-0.5">不一定</span>。主要看齒列、咬合與臉部側面外觀。需拔牙矯正者約占病例的 6～7 成，但是否拔牙，仍須由醫師檢查、診斷，並與病人充分討論。</p></div>
+                        <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 relative">
+                          <div class="flex-1 text-left space-y-5 sm:space-y-7 md:pr-4 pb-2 md:pb-4 max-w-xl">
+                            <div><div class="flex items-center gap-2.5 mb-1.5 sm:mb-2"><span class="rounded-full bg-[#1e4d9d] inline-block shrink-0 shadow-none" style="width: 18px; height: 18px;"></span><h4 class="type-normalized font-black text-[#1e4d9d] tracking-wide leading-tight" style="--assessment-original-size:clamp(14px, 3.8vw, 28px);--assessment-original-weight:900;--assessment-original-leading:1.25;--assessment-original-spacing:.025em;font-size: clamp(14px, 3.8vw, 28px);" data-type="card-title">可能需拔牙</h4></div><p class="type-normalized text-[#1e4d9d] font-medium leading-relaxed tracking-wide" style="--assessment-original-size:clamp(12px, 3.2vw, 23px);--assessment-original-weight:500;--assessment-original-leading:1.625;--assessment-original-spacing:.025em;font-size: clamp(12px, 3.2vw, 23px);" data-type="body">牙齒擁擠、外暴或臉型外突，需騰出空間，讓牙齒排整齊或往內移。</p></div>
+                            <div><div class="flex items-center gap-2.5 mb-1.5 sm:mb-2"><span class="rounded-full bg-[#cc0000] inline-block shrink-0 shadow-none" style="width: 18px; height: 18px;"></span><h4 class="type-normalized font-black text-[#1e4d9d] tracking-wide leading-tight" style="--assessment-original-size:clamp(14px, 3.8vw, 28px);--assessment-original-weight:900;--assessment-original-leading:1.25;--assessment-original-spacing:.025em;font-size: clamp(14px, 3.8vw, 28px);" data-type="card-title">優先考慮不拔牙</h4></div><p class="type-normalized text-[#1e4d9d] font-medium leading-relaxed tracking-wide" style="--assessment-original-size:clamp(12px, 3.2vw, 23px);--assessment-original-weight:500;--assessment-original-leading:1.625;--assessment-original-spacing:.025em;font-size: clamp(12px, 3.2vw, 23px);" data-type="body">牙齒已有空隙，或臉型較呈平凹狀。</p></div>
+                          </div>
+                          <div class="assessment-illustration shrink-0 self-end flex flex-col items-center justify-end relative group select-none max-w-[160px] sm:max-w-none" style="width: 285px; margin-bottom: -52px;">
+                            <img alt="拔牙評估配圖" class="w-full h-auto max-h-[350px] object-contain object-bottom pointer-events-auto" src="./images/slide2-braces-girl.png">
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Slide 2: 諮詢 Q&A -->
+                      <div data-assessment-slide-desktop="2" class="hidden">
+                        <ul class="space-y-4 sm:space-y-5 md:space-y-6 text-left">
+                          <li class="flex items-center text-left" style="gap: 11px;"><div class="assessment-question-icon rounded-full bg-[#1e4d9d] text-white font-black flex items-center justify-center shrink-0 shadow-none select-none" style="width: clamp(28px, 7vw, 60px); height: clamp(28px, 7vw, 60px); font-size: clamp(13px, 3.4vw, 31px); line-height: 1;"><span class="question-glyph">Q</span></div><div class="flex-1 flex flex-col justify-center"><h4 class="type-normalized text-[#1e4d9d] font-black tracking-wide" style="--assessment-original-size:clamp(13px, 3.6vw, 28px);--assessment-original-weight:900;--assessment-original-leading:1.25;--assessment-original-spacing:.025em;font-size: clamp(13px, 3.6vw, 28px); line-height: 1.25;" data-type="card-title">檢查做齊了嗎？</h4><p class="type-normalized text-[#1e4d9d] font-medium tracking-wide mt-1" style="--assessment-original-size:clamp(11.5px, 3vw, 23px);--assessment-original-weight:500;--assessment-original-leading:1.4;--assessment-original-spacing:.025em;font-size: clamp(11.5px, 3vw, 23px); line-height: 1.4;" data-type="body">有沒有拍全口環景X光、側顱X光，並做口內外攝影與口內掃描？</p></div></li>
+                          <li class="flex items-center text-left" style="gap: 11px;"><div class="assessment-question-icon rounded-full bg-[#1e4d9d] text-white font-black flex items-center justify-center shrink-0 shadow-none select-none" style="width: clamp(28px, 7vw, 60px); height: clamp(28px, 7vw, 60px); font-size: clamp(13px, 3.4vw, 31px); line-height: 1;"><span class="question-glyph">Q</span></div><div class="flex-1 flex flex-col justify-center"><h4 class="type-normalized text-[#1e4d9d] font-black tracking-wide" style="--assessment-original-size:clamp(13px, 3.6vw, 28px);--assessment-original-weight:900;--assessment-original-leading:1.25;--assessment-original-spacing:.025em;font-size: clamp(13px, 3.6vw, 28px); line-height: 1.25;" data-type="card-title">醫師有矯正經驗嗎？</h4><p class="type-normalized text-[#1e4d9d] font-medium tracking-wide mt-1" style="--assessment-original-size:clamp(11.5px, 3vw, 23px);--assessment-original-weight:500;--assessment-original-leading:1.4;--assessment-original-spacing:.025em;font-size: clamp(11.5px, 3vw, 23px); line-height: 1.4;" data-type="body">是否具齒顎矯正專科資格？處理過複雜咬合的案例嗎？</p></div></li>
+                          <li class="flex items-center text-left" style="gap: 11px;"><div class="assessment-question-icon rounded-full bg-[#1e4d9d] text-white font-black flex items-center justify-center shrink-0 shadow-none select-none" style="width: clamp(28px, 7vw, 60px); height: clamp(28px, 7vw, 60px); font-size: clamp(13px, 3.4vw, 31px); line-height: 1;"><span class="question-glyph">Q</span></div><div class="flex-1 flex flex-col justify-center"><h4 class="type-normalized text-[#1e4d9d] font-black tracking-wide" style="--assessment-original-size:clamp(13px, 3.6vw, 28px);--assessment-original-weight:900;--assessment-original-leading:1.25;--assessment-original-spacing:.025em;font-size: clamp(13px, 3.6vw, 28px); line-height: 1.25;" data-type="card-title">要不要多問一位醫師？</h4><p class="type-normalized text-[#1e4d9d] font-medium tracking-wide mt-1" style="--assessment-original-size:clamp(11.5px, 3vw, 23px);--assessment-original-weight:500;--assessment-original-leading:1.4;--assessment-original-spacing:.025em;font-size: clamp(11.5px, 3vw, 23px); line-height: 1.4;" data-type="body">可找信任的牙醫師討論，尋求第二意見，別只看廣告就決定。</p></div></li>
+                          <li class="flex items-center text-left" style="gap: 11px;"><div class="assessment-question-icon rounded-full bg-[#1e4d9d] text-white font-black flex items-center justify-center shrink-0 shadow-none select-none" style="width: clamp(28px, 7vw, 60px); height: clamp(28px, 7vw, 60px); font-size: clamp(13px, 3.4vw, 31px); line-height: 1;"><span class="question-glyph">Q</span></div><div class="flex-1 flex flex-col justify-center"><h4 class="type-normalized text-[#1e4d9d] font-black tracking-wide" style="--assessment-original-size:clamp(13px, 3.6vw, 28px);--assessment-original-weight:900;--assessment-original-leading:1.25;--assessment-original-spacing:.025em;font-size: clamp(13px, 3.6vw, 28px); line-height: 1.25;" data-type="card-title">療程出問題找誰？</h4><p class="type-normalized text-[#1e4d9d] font-medium tracking-wide mt-1" style="--assessment-original-size:clamp(11.5px, 3vw, 23px);--assessment-original-weight:500;--assessment-original-leading:1.4;--assessment-original-spacing:.025em;font-size: clamp(11.5px, 3vw, 23px); line-height: 1.4;" data-type="body">廠商線上媒合時，須問清「主治醫師」與「後續責任歸屬」。</p></div></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- 圓點切換器 -->
+                    <div class="flex items-center justify-between sm:justify-center gap-2 mt-5 sm:mt-6 px-1">
+                      <div class="flex items-center gap-2" data-slide-dots="true">
+                        <button data-slide-dot="0" class="h-2.5 rounded-full transition-all cursor-pointer w-7 sm:w-8 bg-[#1e4d9d]" title="切換至：矯正前需要做哪些評估和檢查？"></button>
+                        <button data-slide-dot="1" class="h-2.5 rounded-full transition-all cursor-pointer w-2.5 bg-slate-300 hover:bg-slate-400" title="切換至：矯正一定需要拔牙？如何判斷？"></button>
+                        <button data-slide-dot="2" class="h-2.5 rounded-full transition-all cursor-pointer w-2.5 bg-slate-300 hover:bg-slate-400" title="切換至：牙齒矯正前先問清楚4件事"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 3. 種類比較 (section-comparison)：行內樣式確保上下內距切實撐開 -->
+          <section id="section-comparison" class="px-2 sm:px-6 lg:px-8">
+            <div class="chapter-shell mx-auto bg-white rounded-[24px] sm:rounded-[44px] md:rounded-[48px] px-3.5 sm:px-10 md:px-12 transition-all duration-150 shadow-none" style="max-width: var(--editorial-card-width, 1280px); padding-top: clamp(60px, 6vw, 96px); padding-bottom: clamp(60px, 6vw, 96px);">
+              <div class="mx-auto px-0.5 sm:px-4 transition-all duration-150" style="max-width: var(--editorial-container-width, 1024px);">
+                <div class="w-9 sm:w-10 h-2.5 sm:h-3 bg-[#ffb400] mx-auto mb-4 chapter-heading-accent"></div>
+                <h2 class="type-normalized font-black text-[#1e4d9d] mb-3 sm:mb-5 font-sans leading-snug mx-auto transition-all text-xl sm:text-[length:var(--editorial-title-size,38px)] text-center" style="letter-spacing: var(--editorial-title-spacing, 1.2px);" data-type="chapter"><span class="">傳統矯正VS隱形牙套？選對比價格更重要</span></h2>
+                <div class="text-[#1e4d9d] mb-6 sm:mb-14 font-medium transition-all text-xs sm:text-[length:var(--editorial-intro-size,18px)] editorial-justify" style="line-height: var(--editorial-intro-line-height, 1.95); letter-spacing: var(--editorial-intro-spacing, 0.6px);"><p class="type-normalized " data-type="intro">隱形牙套美觀、可拆取，但療程時間通常比較久且極度仰賴自律；傳統矯正外觀雖然比較明顯、初期可能有摩擦疼痛，卻較能處理複雜且困難的牙齒移動，療程也比較快速。</p></div>
+                
+                <!-- 桌面版完整表格：模型圖距下緣更近、hover 背景色更明顯 -->
+                <div class="mobile-comparison" data-comparison-tabs>
+<div class="comparison-tablist" role="tablist" aria-label="選擇矯正方式"><button type="button" role="tab" id="comparison-tab-0" aria-controls="comparison-panel-0" aria-selected="true" tabindex="0" class="type-normalized" data-type="tab">傳統矯正</button><button type="button" role="tab" id="comparison-tab-1" aria-controls="comparison-panel-1" aria-selected="false" tabindex="-1" class="type-normalized" data-type="tab">隱形牙套</button></div><div class="comparison-panels"><div class="comparison-panel" role="tabpanel" id="comparison-panel-0" aria-labelledby="comparison-tab-0" aria-hidden="false" tabindex="0" ><div class="comparison-model"><img src="./images/trad_braces_cutout.png" alt="傳統矯正牙齒模型" width="180" height="120"></div><dl class="comparison-details"><div class="comparison-detail"><dt class="type-normalized" data-type="meta">配戴外觀</dt><dd><strong class="type-normalized" data-type="emphasis">較明顯，可能產生摩擦感</strong></dd></div><div class="comparison-detail"><dt class="type-normalized" data-type="meta">治療費用</dt><dd><strong class="type-normalized" data-type="emphasis">全口約 10～20 萬元</strong></dd></div><div class="comparison-detail"><dt class="type-normalized" data-type="meta">口腔清潔</dt><dd><strong class="type-normalized" data-type="emphasis">無法拆下，須搭配牙間刷、牙間穿引器等工具</strong></dd></div><div class="comparison-detail"><dt class="type-normalized" data-type="meta">牙齒移動</dt><dd><strong class="type-normalized" data-type="emphasis">控制度高，能處理複雜移動</strong></dd></div><div class="comparison-detail"><dt class="type-normalized" data-type="meta">回診安排</dt><dd><strong class="type-normalized" data-type="emphasis">較頻繁，約每月一次</strong></dd></div><div class="comparison-detail"><dt class="type-normalized" data-type="meta">療程時間</dt><dd><strong class="type-normalized" data-type="emphasis">較短</strong></dd></div><div class="comparison-detail"><dt class="type-normalized" data-type="meta">適用情況</dt><dd><strong class="type-normalized" data-type="emphasis">適用範圍較廣，包括複雜病例</strong></dd></div></dl></div><div class="comparison-panel is-inactive" role="tabpanel" id="comparison-panel-1" aria-labelledby="comparison-tab-1" aria-hidden="true" tabindex="-1" inert><div class="comparison-model"><img src="./images/clear_aligner_cutout.png" alt="隱形牙套牙齒模型" width="180" height="120"></div><dl class="comparison-details"><div class="comparison-detail"><dt class="type-normalized" data-type="meta">配戴外觀</dt><dd><strong class="type-normalized" data-type="emphasis">透明、表面平滑不刮肉</strong></dd></div><div class="comparison-detail"><dt class="type-normalized" data-type="meta">治療費用</dt><dd><strong class="type-normalized" data-type="emphasis">全口約 20～40 萬元</strong></dd></div><div class="comparison-detail"><dt class="type-normalized" data-type="meta">口腔清潔</dt><dd><strong class="type-normalized" data-type="emphasis">可拆下，刷牙與使用牙線較方便</strong></dd></div><div class="comparison-detail"><dt class="type-normalized" data-type="meta">牙齒移動</dt><dd><strong class="type-normalized" data-type="emphasis">拉力溫和，牙齒移動較受限制</strong></dd></div><div class="comparison-detail"><dt class="type-normalized" data-type="meta">回診安排</dt><dd><strong class="type-normalized" data-type="emphasis">回診間隔較長</strong></dd></div><div class="comparison-detail"><dt class="type-normalized" data-type="meta">療程時間</dt><dd><strong class="type-normalized" data-type="emphasis">較長</strong></dd></div><div class="comparison-detail"><dt class="type-normalized" data-type="meta">適用情況</dt><dd><strong class="type-normalized" data-type="emphasis">多用於輕至中度病例</strong></dd></div></dl></div></div></div>
+<div class="comparison-table mb-4 relative transition-all" style="padding-top: 56px; margin-top: 16px;">
+                  <div class="table-scroll" tabindex="0" role="region" aria-label="矯正方式比較表，可左右滑動">
+                    <table class="w-full text-left border-separate border-spacing-0 shadow-none transition-all bg-transparent min-w-[480px] sm:min-w-[620px]" style="border-width: 3px; border-style: solid; border-color: rgb(30, 77, 157); border-radius: 16px;">
+                      <thead>
+                        <tr class="bg-[#1e4d9d] text-white">
+                          <th class="py-2.5 px-3 sm:px-6 w-[26%] sm:w-[22%] font-black tracking-wide align-middle text-left sticky left-0 bg-[#1e4d9d] z-20 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.15)] sm:shadow-none" style="border-top-left-radius: 13px; padding-bottom: 14px; padding-top: 12px;"><span class="type-normalized inline-block text-white font-black" style="font-size: clamp(14px, 3.8vw, 20px);" data-type="card-title">比較項目</span></th>
+                          <th class="py-2.5 px-3 sm:px-6 font-black tracking-wide align-middle text-left w-[37%] sm:w-[39%]" style="padding-bottom: 14px; padding-top: 12px;">
+                            <div class="flex items-center justify-start relative flex-wrap sm:flex-nowrap" style="gap: 12px;"><span class="type-normalized font-black text-white tracking-wide shrink-0" style="font-size: clamp(15px, 4vw, 24px);" data-type="card-title">傳統矯正</span><div class="relative shrink-0 select-none my-1 sm:my-0" style="margin-top: 0px; margin-bottom: 0px;"><div class="cursor-pointer"><img alt="傳統矯正牙齒模型" class="object-contain" src="./images/trad_braces_cutout.png" style="height: 125px; max-height: clamp(58px, 14vw, 150px); width: auto;"></div></div></div>
+                          </th>
+                          <th class="py-2.5 px-3 sm:px-6 font-black tracking-wide align-middle text-left w-[37%] sm:w-[39%]" style="padding-bottom: 14px; padding-top: 12px; border-top-right-radius: 13px;">
+                            <div class="flex items-center justify-start relative flex-wrap sm:flex-nowrap" style="gap: 12px;"><span class="type-normalized font-black text-white tracking-wide shrink-0" style="font-size: clamp(15px, 4vw, 24px);" data-type="card-title">隱形牙套</span><div class="relative shrink-0 select-none my-1 sm:my-0" style="margin-top: 0px; margin-bottom: 0px;"><div class="cursor-pointer"><img alt="隱形牙套牙齒模型" class="object-contain" src="./images/clear_aligner_cutout.png" style="height: 125px; max-height: clamp(58px, 14vw, 150px); width: auto;"></div></div></div>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody class="text-[#1e4d9d] bg-white">
+                        <tr class="hover:bg-blue-100/60 transition-colors relative group/row"><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 font-bold text-[#1e4d9d] align-top whitespace-nowrap sticky left-0 bg-inherit z-10 border-r border-slate-100 sm:border-r-0 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.08)] sm:shadow-none" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom: 2px solid rgb(226, 232, 240);" data-type="body"><div class="flex items-center gap-1.5"><span class="">配戴外觀</span></div></td><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 align-top leading-relaxed text-[#1e4d9d]" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom: 2px solid rgb(226, 232, 240);" data-type="body"><div class="font-bold text-[#1e4d9d]"><span class="">較明顯，可能產生摩擦感</span></div></td><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 align-top leading-relaxed text-[#1e4d9d]" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom: 2px solid rgb(226, 232, 240);" data-type="body"><div class="font-bold text-[#1e4d9d]"><span class="">透明、表面平滑不刮肉</span></div></td></tr>
+                        <tr class="hover:bg-blue-100/60 transition-colors relative group/row"><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 font-bold text-[#1e4d9d] align-top whitespace-nowrap sticky left-0 bg-inherit z-10 border-r border-slate-100 sm:border-r-0 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.08)] sm:shadow-none" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom: 2px solid rgb(226, 232, 240);" data-type="body"><div class="flex items-center gap-1.5"><span class="">治療費用</span></div></td><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 align-top leading-relaxed text-[#1e4d9d]" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom: 2px solid rgb(226, 232, 240);" data-type="body"><div class="font-bold text-[#1e4d9d]"><span class="">全口約 10～20 萬元</span></div></td><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 align-top leading-relaxed text-[#1e4d9d]" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom: 2px solid rgb(226, 232, 240);" data-type="body"><div class="font-bold text-[#1e4d9d]"><span class="">全口約 20～40 萬元</span></div></td></tr>
+                        <tr class="hover:bg-blue-100/60 transition-colors relative group/row"><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 font-bold text-[#1e4d9d] align-middle whitespace-nowrap sticky left-0 bg-inherit z-10 border-r border-slate-100 sm:border-r-0 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.08)] sm:shadow-none" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom: 2px solid rgb(226, 232, 240);" data-type="body"><div class="flex items-center gap-1.5"><span class="">口腔清潔</span></div></td><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 align-middle leading-relaxed text-[#1e4d9d]" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom: 2px solid rgb(226, 232, 240);" data-type="body"><div class="font-bold text-[#1e4d9d]"><span class="">無法拆下</span></div><div class="text-[#1e4d9d]/80 font-normal mt-1 leading-normal" style="font-size: clamp(11px, 3vw, 16px);"><span class="">須搭配牙間刷、牙間穿引器等工具</span></div></td><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 align-middle leading-relaxed text-[#1e4d9d]" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom: 2px solid rgb(226, 232, 240);" data-type="body"><div class="font-bold text-[#1e4d9d]"><span class="">可拆下</span></div><div class="text-[#1e4d9d]/80 font-normal mt-1 leading-normal" style="font-size: clamp(11px, 3vw, 16px);"><span class="">刷牙與使用牙線較方便</span></div></td></tr>
+                        <tr class="hover:bg-blue-100/60 transition-colors relative group/row"><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 font-bold text-[#1e4d9d] align-top whitespace-nowrap sticky left-0 bg-inherit z-10 border-r border-slate-100 sm:border-r-0 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.08)] sm:shadow-none" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom: 2px solid rgb(226, 232, 240);" data-type="body"><div class="flex items-center gap-1.5"><span class="">牙齒移動</span></div></td><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 align-top leading-relaxed text-[#1e4d9d]" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom: 2px solid rgb(226, 232, 240);" data-type="body"><div class="font-bold text-[#1e4d9d]"><span class="">控制度高，能處理複雜移動</span></div></td><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 align-top leading-relaxed text-[#1e4d9d]" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom: 2px solid rgb(226, 232, 240);" data-type="body"><div class="font-bold text-[#1e4d9d]"><span class="">拉力溫和，牙齒移動較受限制</span></div></td></tr>
+                        <tr class="hover:bg-blue-100/60 transition-colors relative group/row"><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 font-bold text-[#1e4d9d] align-top whitespace-nowrap sticky left-0 bg-inherit z-10 border-r border-slate-100 sm:border-r-0 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.08)] sm:shadow-none" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom: 2px solid rgb(226, 232, 240);" data-type="body"><div class="flex items-center gap-1.5"><span class="">回診安排</span></div></td><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 align-top leading-relaxed text-[#1e4d9d]" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom: 2px solid rgb(226, 232, 240);" data-type="body"><div class="font-bold text-[#1e4d9d]"><span class="">較頻繁，約每月一次</span></div></td><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 align-top leading-relaxed text-[#1e4d9d]" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom: 2px solid rgb(226, 232, 240);" data-type="body"><div class="font-bold text-[#1e4d9d]"><span class="">回診間隔較長</span></div></td></tr>
+                        <tr class="hover:bg-blue-100/60 transition-colors relative group/row"><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 font-bold text-[#1e4d9d] align-top whitespace-nowrap sticky left-0 bg-inherit z-10 border-r border-slate-100 sm:border-r-0 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.08)] sm:shadow-none" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom: 2px solid rgb(226, 232, 240);" data-type="body"><div class="flex items-center gap-1.5"><span class="">療程時間</span></div></td><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 align-top leading-relaxed text-[#1e4d9d]" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom: 2px solid rgb(226, 232, 240);" data-type="body"><div class="font-bold text-[#1e4d9d]"><span class="">較短</span></div></td><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 align-top leading-relaxed text-[#1e4d9d]" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom: 2px solid rgb(226, 232, 240);" data-type="body"><div class="font-bold text-[#1e4d9d]"><span class="">較長</span></div></td></tr>
+                        <tr class="hover:bg-blue-100/60 transition-colors relative group/row"><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 font-bold text-[#1e4d9d] align-top whitespace-nowrap sticky left-0 bg-inherit z-10 border-r border-slate-100 sm:border-r-0 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.08)] sm:shadow-none" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor; border-bottom-left-radius: 13px;" data-type="body"><div class="flex items-center gap-1.5"><span class="">適用情況</span></div></td><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 align-top leading-relaxed text-[#1e4d9d]" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor;" data-type="body"><div class="font-bold text-[#1e4d9d]"><span class="">適用範圍較廣，包括複雜病例</span></div></td><td class="type-normalized py-3.5 sm:py-5 px-3 sm:px-6 align-top leading-relaxed text-[#1e4d9d]" style="font-size: clamp(13px, 3.5vw, 18px); border-bottom-width: medium; border-bottom-style: none; border-bottom-color: currentcolor; border-bottom-right-radius: 13px;" data-type="body"><div class="font-bold text-[#1e4d9d]"><span class="">多用於輕至中度病例</span></div></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <!-- 表格下的備註上移 -->
+                <div class="comparison-note space-y-1.5 pt-1.5 text-[11px] sm:text-xs text-[#1e4d9d]/80 font-medium tracking-[0.02em]"><p class="type-normalized " data-type="note">備註：實際費用、療程時間及適用方式，會因病例難度、治療計劃及醫療院所而異，皆須由專業醫師個別評估。</p></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 4. 日常護理 (section-daily-care)：行內樣式確保上下內距切實撐開 -->
+          <section id="section-daily-care" class="px-3 sm:px-6 lg:px-8">
+            <div class="chapter-shell mx-auto bg-white rounded-[24px] sm:rounded-[44px] md:rounded-[48px] px-3.5 sm:p-10 md:p-12 transition-all duration-150 shadow-none" style="max-width: var(--editorial-card-width, 1280px); padding-top: clamp(60px, 6vw, 96px); padding-bottom: clamp(60px, 6vw, 96px);">
+              <div class="mx-auto px-1 sm:px-4 transition-all duration-150" style="max-width: var(--editorial-container-width, 1024px);">
+                <div class="w-9 sm:w-10 h-1.5 sm:h-3 bg-[#ffb400] mx-auto mb-3 sm:mb-4 rounded-full sm:rounded-none chapter-heading-accent"></div>
+                <h2 class="type-normalized font-black text-[#1e4d9d] mb-3 sm:mb-5 font-sans leading-snug mx-auto transition-all text-xl sm:text-[length:var(--editorial-title-size,38px)] text-center" style="letter-spacing: var(--editorial-title-spacing, 1.2px);" data-type="chapter"><span class="">日常飲食、清潔、受傷護理一次看</span></h2>
+                <div class="text-[#1e4d9d] mb-6 sm:mb-10 font-medium transition-all text-xs sm:text-[length:var(--editorial-intro-size,18px)] editorial-justify" style="line-height: var(--editorial-intro-line-height, 1.95); letter-spacing: var(--editorial-intro-spacing, 0.6px);"><p class="type-normalized " data-type="intro">牙齒矯正期間，日常飲食習慣與口腔清潔至關重要。做好照護能避免蛀牙、脫鈣與托槽脫落，讓療程如期順利完成。</p></div>
+                
+ <div class="care-layout">
+  <section class="care-block care-eating" aria-labelledby="care-eating-title">
+   <h3 class="type-normalized care-speech" id="care-eating-title" data-type="subsection">戴牙套怎麼吃東西？</h3>
+   <div class="care-diet-grid">
+    <div class="care-diet-card care-diet-good">
+     <h4 class="type-normalized" data-type="card-title">建議這樣吃</h4>
+     <ul><li class="type-normalized" data-type="body">疼痛期選擇<strong>柔軟且有營養</strong>的食物（如蒸蛋、豆腐、稀飯）。</li><li class="type-normalized" data-type="body">維持<strong>均衡飲食</strong>，避免因疼痛長期只吃流質食物導致營養失衡。</li><li class="type-normalized" data-type="body"><strong>太硬</strong>的食物（如芭樂、蘋果）請<strong>切小塊</strong>，<strong>細嚼慢嚥</strong>。</li></ul>
+     <div class="care-image care-food-image"><img src="./images/daily-care-food-soft.png" alt="柔軟食物，例如蒸蛋" loading="eager" onload="this.hidden=false;this.parentElement.classList.add('has-image')" onerror="this.hidden=true;this.parentElement.classList.remove('has-image')"><span class="care-image-placeholder">圖片預留位置<br><small>daily-care-food-soft.png</small></span></div>
+    </div>
+    <div class="care-diet-card care-diet-avoid">
+     <h4 class="type-normalized" data-type="card-title">應避免的習慣</h4>
+     <ul><li class="type-normalized" data-type="body">避免<strong>太硬</strong>（如堅果、甘蔗）或<strong>太黏</strong>（如麥芽糖、牛軋糖）的食物。</li><li class="type-normalized" data-type="body">避免<strong>太甜</strong>且容易殘留在矯正器縫隙的食物，降低蛀牙風險。</li><li class="type-normalized" data-type="body">避免<strong>直接用門牙大力啃咬</strong>食物，以免矯正器脫落。</li></ul>
+     <div class="care-image care-food-image"><img src="./images/daily-care-food-avoid-v2.png" alt="應避免的糖果與堅果" loading="eager" onload="this.hidden=false;this.parentElement.classList.add('has-image')" onerror="this.hidden=true;this.parentElement.classList.remove('has-image')"><span class="care-image-placeholder">圖片預留位置<br><small>daily-care-food-avoid-v2.png</small></span></div>
+    </div>
+   </div>
+  </section>
+  <section class="care-block care-cleaning" aria-labelledby="care-cleaning-title">
+   <h3 class="type-normalized care-speech" id="care-cleaning-title" data-type="subsection">戴牙套怎麼刷牙、維持口腔清潔？</h3>
+   <p class="type-normalized care-cleaning-intro" data-type="body">矯正期間要做好清潔，並定期 3～4 週回診檢查，避免牙齒排列整齊了，卻留下蛀牙或牙周病。</p>
+   <div class="care-tool-labels">
+    <div><h4 class="type-normalized care-pill" data-type="label">基本工具</h4><p class="type-normalized" data-type="body">牙刷、牙間刷、<br>矯正專用牙線</p></div>
+    <div><h4 class="type-normalized care-pill" data-type="label">輔助工具</h4><p class="type-normalized" data-type="body">搭配含氟牙膏，依牙醫師<br class="care-desktop-break">建議使用其他含氟產品。</p></div>
+   </div>
+   <div class="care-image care-tools-image"><img src="./images/daily-care-cleaning-tools-selected.png?v=219" alt="牙刷、牙間刷、矯正牙線、含氟牙膏與漱口水" loading="eager" onload="this.hidden=false;this.parentElement.classList.add('has-image')" onerror="this.hidden=true;this.parentElement.classList.remove('has-image')"><span class="care-image-placeholder">圖片預留位置<br><small>daily-care-cleaning-tools-selected.png?v=219</small></span></div>
+   <div class="care-brushing">
+    <h4 class="type-normalized care-pill" data-type="label">傳統矯正器潔牙 3 步驟</h4>
+    <ol>
+     <li><div class="care-numbered-heading"><span class="care-step-number" aria-hidden="true">1</span><strong class="type-normalized" data-type="card-title">牙刷分區刷</strong></div><p class="type-normalized" data-type="body">牙套靠牙齦側、牙套本身及靠咬合面側，都要刷到。</p></li>
+     <li><div class="care-numbered-heading"><span class="care-step-number" aria-hidden="true">2</span><strong class="type-normalized" data-type="card-title">牙間刷補強</strong></div><p class="type-normalized" data-type="body">清潔牙縫與鋼線周圍。</p></li>
+     <li><div class="care-numbered-heading"><span class="care-step-number" aria-hidden="true">3</span><strong class="type-normalized" data-type="card-title">牙線清牙縫</strong></div><p class="type-normalized" data-type="body">用穿引器將牙線穿過鋼線，清潔相鄰牙面。</p></li>
+    </ol>
+   </div>
+  </section>
+  <section class="care-block care-injury" aria-labelledby="care-injury-title">
+   <h3 class="type-normalized care-speech" id="care-injury-title" data-type="subsection">矯正器刺到口腔黏膜怎麼辦？</h3>
+   <div class="care-injury-guide"><figure class="care-injury-guide-image"><img src="./images/daily-care-injury-2-v2.png" alt="將矯正白蠟蓋在矯正器突出處的示意圖" loading="eager"></figure><ol class="care-injury-steps"><li><h4 class="type-normalized" data-type="card-title"><span class="care-injury-number" aria-hidden="true">1</span>找出刺痛處</h4><p class="type-normalized" data-type="body">看看是否有綁線頭突出，或矯正鋼線末端太長。</p></li><li><h4 class="type-normalized" data-type="card-title"><span class="care-injury-number" aria-hidden="true">2</span>蓋上矯正白蠟</h4><p class="type-normalized" data-type="body">蓋住突出處，減少摩擦。</p></li><li><h4 class="type-normalized" data-type="card-title"><span class="care-injury-number" aria-hidden="true">3</span>傷口擦口內膏</h4><p class="type-normalized" data-type="body">依醫師或藥師指示使用。</p></li><li><h4 class="type-normalized" data-type="card-title"><span class="care-injury-number" aria-hidden="true">4</span>仍痛就回診</h4><p class="type-normalized" data-type="body">若無法處理或持續疼痛，盡快回診請牙醫師調整。</p></li></ol></div>
+  </section>
+ </div>
+ </div></div></section>
+
+          <!-- 5. 維持效果 (section-retention)：行內樣式確保上下內距切實撐開 -->
+          <section id="section-retention" class="px-3 sm:px-6 lg:px-8">
+            <div class="chapter-shell mx-auto bg-white rounded-[24px] sm:rounded-[44px] md:rounded-[48px] px-3.5 sm:p-10 md:p-12 transition-all duration-150 shadow-none" style="max-width: var(--editorial-card-width, 1280px); padding-top: clamp(60px, 6vw, 96px); padding-bottom: clamp(60px, 6vw, 96px);">
+              <div class="mx-auto px-1 sm:px-4 transition-all duration-150" style="max-width: var(--editorial-container-width, 1024px);">
+                <div class="w-9 sm:w-10 h-1.5 sm:h-3 bg-[#ffb400] mx-auto mb-3 sm:mb-4 rounded-full sm:rounded-none chapter-heading-accent"></div>
+                <h2 class="type-normalized font-black text-[#1e4d9d] mb-3 sm:mb-5 font-sans leading-snug mx-auto transition-all text-xl sm:text-[length:var(--editorial-title-size,38px)] text-center" style="letter-spacing: var(--editorial-title-spacing, 1.2px);" data-type="chapter">拆掉牙套≠療程結束，如何守住矯正效果？</h2>
+                <p class="retention-intro type-normalized" data-type="intro">拆掉牙套後，牙齒仍可能移位。想維持成果，要注意 5 件事：</p>
+<div class="retention-corner-layout"><ul class="retention-list"><li><h3 class="type-normalized" data-type="card-title"><img class="retention-red-check" src="./images/checklist-check.png" alt="" width="26" height="26">勤戴維持器</h3><p class="type-normalized" data-type="body">依醫師指示配戴維持器（固定式或活動式），別自行停戴。</p></li>
+<li><h3 class="type-normalized" data-type="card-title"><img class="retention-red-check" src="./images/checklist-check.png" alt="" width="26" height="26">清潔維持器</h3><p class="type-normalized" data-type="body">活動式維持器應定期清洗，不戴時放進專用盒。</p></li>
+<li><h3 class="type-normalized" data-type="card-title"><img class="retention-red-check" src="./images/checklist-check.png" alt="" width="26" height="26">定期回診</h3><p class="type-normalized" data-type="body">追蹤齒列與咬合，尤其仍在發育的孩子。</p></li>
+<li><h3 class="type-normalized" data-type="card-title"><img class="retention-red-check" src="./images/checklist-check.png" alt="" width="26" height="26">留意復位</h3><p class="type-normalized" data-type="body">牙齒可能被牙周韌帶拉回原位，或其他因素導致復位，額外處置須由醫師評估。</p></li>
+<li><h3 class="type-normalized" data-type="card-title"><img class="retention-red-check" src="./images/checklist-check.png" alt="" width="26" height="26">改掉不良習慣</h3><p class="type-normalized" data-type="body">例如舌吞嚥、吸手指等不良習慣，矯正後應配合改正。</p></li></ul><figure class="retention-corner-illustration"><img src="./images/retention-case-cutout.png" alt="透明維持器與藍色收納盒示意圖" width="1536" height="1024" loading="lazy" decoding="async"></figure></div>
+</div></div></section>
+
+        </div>
+      </main>
+
+      <!-- 康健標準社群追蹤區塊 -->
+      <div class="ch-section-social">
+        <div class="ch-wrap">
+          <div class="ch-wrapper">
+            <h2>追蹤我們，最新資訊不漏接</h2>
+            <div class="ch-social-media">
+              <a class="ch-social-group" href="https://line.me/ti/p/@commonhealth" target="_blank">
+                <img src="https://www.commonhealth.com.tw/vendor/feature-frontend/images/index/icon-line.svg" alt="加入 LINE 好友">
+                <p>加入 LINE 好友</p>
+              </a>
+              <a class="ch-social-group" href="https://www.facebook.com/commonhealth/" target="_blank">
+                <img src="https://www.commonhealth.com.tw/vendor/feature-frontend/images/index/icon-fb.svg" alt="追蹤 Facebook">
+                <p>追蹤 Facebook</p>
+              </a>
+              <a class="ch-social-group" href="https://www.instagram.com/commonhealth.official/" target="_blank">
+                <img src="https://www.commonhealth.com.tw/vendor/feature-frontend/images/index/icon-instagram.svg" alt="追蹤 Instagram">
+                <p>追蹤 Instagram</p>
+              </a>
+              <a class="ch-social-group" href="https://www.youtube.com/user/CommonHealthTV" target="_blank">
+                <img src="https://www.commonhealth.com.tw/vendor/feature-frontend/images/index/icon-youtube.svg" alt="訂閱 Youtube">
+                <p>訂閱 Youtube</p>
+              </a>
+              <a class="ch-social-group" href="https://solink.soundon.fm/commonhealth">
+                <img src="https://www.commonhealth.com.tw/vendor/feature-frontend/images/index/icon-podcast.svg" alt="訂閱 Podcast">
+                <p>訂閱 Podcast</p>
+              </a>
+              <a class="ch-social-group" href="https://www.commonhealth.com.tw/member/member_newsletter" target="_blank">
+                <img src="https://www.commonhealth.com.tw/vendor/feature-frontend/images/index/icon-edm.svg" alt="訂閱電子報">
+                <p>訂閱電子報</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 康健標準 Footer -->
+      <footer>
+        <ul>
+          <li><a href="https://www.commonhealth.com.tw" target="_blank">康健官網</a></li>
+          <li><a href="https://www.commonhealth.com.tw/magazine_list" target="_blank">康健雜誌</a></li>
+          <li><a href="https://www.commonhealth.com.tw/book" target="_blank">康健出版</a></li>
+          <li><a href="https://www.youtube.com/user/CommonHealthTV" target="_blank">康健影音</a></li>
+          <li><a href="https://kb.commonhealth.com.tw" target="_blank">康健知識庫</a></li>
+          <li><a href="https://club.commonhealth.com.tw" target="_blank">大人社團</a></li>
+          <li><a href="https://cancer.commonhealth.com.tw" target="_blank">癌症問康健</a></li>
+        </ul>
+        <p>Copyright © 2026 康健雜誌（天下生活出版股份有限公司）All rights reserved.</p>
+        <ul>
+          <li><a href="https://member.cwg.tw/privacy-policy" target="_blank">隱私權政策</a></li>
+          <li><a href="https://member.cwg.tw/register-rule" target="_blank">會員服務條款</a></li>
+        </ul>
+      </footer>
+
+      <!-- 回到頂部按鈕 -->
+      <button
+        id="scroll-to-top-btn"
+        class="fixed bottom-6 right-6 z-30 p-3 rounded-full bg-amber-500 hover:bg-amber-600 text-amber-950 font-bold shadow-lg shadow-amber-500/30 border border-amber-300/80 transition-all hover:scale-105 cursor-pointer opacity-0 pointer-events-none"
+        title="回到頁首"
+      >
+        <svg class="w-5 h-5 text-amber-950 font-bold" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- JavaScript 互動腳本 (含漢堡選單、平滑錨點捲動、卡片翻轉、無阻礙輪播與數字累加動畫) -->
+  <script src="interactions.js?v=remove-progress-156" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

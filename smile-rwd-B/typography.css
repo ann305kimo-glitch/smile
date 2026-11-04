@@ -1,0 +1,79 @@
+/* Editorial typography: one scale for each semantic role. */
+#editorial-main-content{
+ --type-chapter:44px;--type-subsection:24px;--type-card-title:22px;
+ --type-intro:18px;--type-body:17px;--type-emphasis:22px;
+ --type-label:17px;--type-compact:16px;--type-meta:14px;--type-note:12px;
+ --type-chart-title:22px;--type-chart-caption:14px;
+}
+@media(max-width:1023px) and (min-width:640px){
+ #editorial-main-content{--type-chapter:36px;--type-card-title:21px;--type-emphasis:20px}
+}
+@media(max-width:639px){
+ #editorial-main-content{
+  --type-chapter:24px;--type-subsection:20px;--type-card-title:18px;
+  --type-intro:16px;--type-body:16px;--type-emphasis:18px;
+  --type-label:16px;--type-compact:14px;--type-meta:14px;--type-note:12px;
+  --type-chart-title:19px;--type-chart-caption:14px;
+ }
+}
+/* Scope these rules to editorial content, keeping brand navigation and visual numerals independent. */
+#editorial-main-content :is(#section-trends,#section-assessment,#section-comparison,#section-daily-care,#section-retention) .type-normalized[data-type]{
+ font-family:'Noto Sans TC',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif!important;
+ font-size:var(--role-size)!important;font-weight:var(--role-weight)!important;
+ line-height:var(--role-leading)!important;letter-spacing:var(--role-spacing, .02em)!important;
+}
+.type-normalized[data-type="chapter"]{--role-size:var(--type-chapter);--role-weight:900;--role-leading:1.45;--role-spacing:.04em}
+.type-normalized[data-type="subsection"]{--role-size:var(--type-subsection);--role-weight:800;--role-leading:1.45;--role-spacing:.04em}
+.type-normalized[data-type="card-title"]{--role-size:var(--type-card-title);--role-weight:800;--role-leading:1.45}
+.type-normalized[data-type="intro"]{--role-size:var(--type-intro);--role-weight:500;--role-leading:1.75}
+.type-normalized[data-type="body"]{--role-size:var(--type-body);--role-weight:500;--role-leading:1.75}
+.type-normalized[data-type="body-strong"]{--role-size:var(--type-body);--role-weight:700;--role-leading:1.75}
+.type-normalized[data-type="emphasis"]{--role-size:var(--type-emphasis);--role-weight:800;--role-leading:1.5}
+.type-normalized[data-type="compact"]{--role-size:var(--type-compact);--role-weight:600;--role-leading:1.65}
+.type-normalized[data-type="label"]{--role-size:var(--type-label);--role-weight:800;--role-leading:1.45}
+.type-normalized[data-type="tab"]{--role-size:var(--type-card-title);--role-weight:800;--role-leading:1.45}
+.type-normalized[data-type="meta"]{--role-size:var(--type-meta);--role-weight:700;--role-leading:1.5}
+.type-normalized[data-type="note"]{--role-size:var(--type-note);--role-weight:500;--role-leading:1.65}
+.type-normalized[data-type="chart-title"]{--role-size:var(--type-chart-title);--role-weight:800;--role-leading:1.4}
+.type-normalized[data-type="chart-caption"]{--role-size:var(--type-chart-caption);--role-weight:600;--role-leading:1.5}
+#editorial-main-content #section-intro [data-type="lead"]{font-size:20px!important;font-weight:500!important;line-height:1.85!important;letter-spacing:.02em!important}
+@media(max-width:639px){
+ #editorial-main-content #section-intro [data-type="lead"]{font-size:16px!important;line-height:1.8!important}
+}
+/* The opening editorial subheading follows the same subsection scale. */
+#editorial-main-content #section-intro h3{font-size:var(--type-subsection)!important;font-weight:800!important;line-height:1.45!important;letter-spacing:.04em!important}
+
+
+
+/* Compact mobile blue labels independently of subsection headings. */
+@media(max-width:639px){
+ #editorial-main-content #section-assessment .type-normalized[data-assessment-badge-desktop],
+ #editorial-main-content #section-trends .trend-card-adaptive .type-normalized[data-type="subsection"]{
+  --role-size:18px;
+ }
+}
+
+/* Keep the desktop retention heading on a single line. */
+@media(min-width:1024px){
+ #editorial-main-content #section-retention h2.type-normalized[data-type="chapter"]{
+  font-size:var(--type-chapter)!important;letter-spacing:.04em!important;white-space:nowrap;
+ }
+}
+
+
+/* Desktop assessment copy retains its original, independently sized typography. */
+@media(min-width:1024px){
+ #editorial-main-content #section-assessment .assessment-card [data-assessment-slide-desktop] .type-normalized[data-type]{
+  font-size:calc(var(--assessment-original-size) - 2px)!important;
+  font-weight:var(--assessment-original-weight)!important;
+  line-height:var(--assessment-original-leading)!important;
+  letter-spacing:var(--assessment-original-spacing)!important;
+ }
+}
+
+
+/* Match the comparison-label header size to its body labels. */
+#editorial-main-content #section-comparison .table-scroll th:first-child .type-normalized[data-type]{font-size:var(--type-body)!important}
+
+/* The editorial lead heading is subordinate to the chapter titles. */
+#editorial-main-content #section-intro h3{font-weight:700!important}

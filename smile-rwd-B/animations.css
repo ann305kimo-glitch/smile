@@ -1,0 +1,99 @@
+/* ========================================================================= */
+/* 【康健數位特輯：笑容改造計劃】動態效果樣式表 (Animations & Dynamic Effects)  */
+/* 包含：牙齒晶亮閃爍、浮空律動、光影呼吸、卡片3D翻轉、平滑捲動            */
+/* 與外觀樣式完全獨立分開，未來若要微調秒數或效果，只需在此修改，簡單好維護      */
+/* ========================================================================= */
+
+/* 1. 主視覺：✨ 牙齒晶亮星芒閃爍動畫 (Sparkle Gleam) */
+@keyframes sparkle-gleam {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(0.2) rotate(0deg);
+  }
+  45%, 55% {
+    opacity: 1;
+    transform: scale(1.18) rotate(45deg);
+  }
+}
+
+.animate-sparkle-gleam {
+  animation: sparkle-gleam var(--sparkle-dur, 2.2s) ease-in-out infinite var(--sparkle-delay, 0s);
+  -webkit-animation: sparkle-gleam var(--sparkle-dur, 2.2s) ease-in-out infinite var(--sparkle-delay, 0s);
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+
+/* 2. 主視覺：牙齒浮空呼吸律動 (Float Hero) */
+@keyframes float-hero {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(0.6deg);
+  }
+}
+
+.animate-float-hero {
+  animation: float-hero 4.8s ease-in-out infinite;
+  -webkit-animation: float-hero 4.8s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* 3. 主視覺：地面光影自然呼吸縮放 (Shadow Hero) */
+@keyframes shadow-hero {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.22;
+  }
+  50% {
+    transform: scale(0.86);
+    opacity: 0.13;
+  }
+}
+
+.animate-shadow-hero {
+  animation: shadow-hero 4.8s ease-in-out infinite;
+  -webkit-animation: shadow-hero 4.8s ease-in-out infinite;
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+
+/* 4. 溫和呼吸淡入淡出動畫 (Pulse) */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.25;
+    transform: scale(0.85);
+  }
+}
+
+/* 5. 區塊 2：卡片 3D 翻轉效果與平滑旋轉過渡 (Flip Card 3D) */
+.perspective-1000 {
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg) !important;
+  -webkit-transform: rotateY(180deg) !important;
+}
+
+/* 6. 平滑捲動 */
+html {
+  scroll-behavior: smooth;
+}

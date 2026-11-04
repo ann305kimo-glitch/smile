@@ -1,0 +1,12 @@
+請將下列七張圖片放入此 images 資料夾，檔名須完全一致。建議 PNG；食物、人物與步驟圖建議透明背景。
+
+1. daily-care-food-soft.png：蒸蛋或柔軟食物，建議 800×600。
+2. daily-care-food-avoid.png：糖果與堅果，建議 800×600。
+3. daily-care-cleaning-tools.png：整組潔牙工具合圖（牙刷、牙間刷、矯正牙線、牙膏、漱口水），建議 1400×1000。
+4. daily-care-injury-1.png：找出刺痛處，建議 800×600。
+5. daily-care-injury-2.png：蓋上矯正白蠟，建議 800×600。
+6. daily-care-injury-3.png：傷口擦口內膏，建議 800×600。
+7. daily-care-injury-4.png：仍痛就回診，建議 800×600。
+
+圖片本身不必加標題與編號，網頁已提供。不同原圖比例也可，網頁會等比例縮放。存入後重新整理 index.html 即會取代預留位置。
+
