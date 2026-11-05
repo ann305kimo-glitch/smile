@@ -1440,3 +1440,25 @@ body #ch-header,body #ch-header.is-scrolled,html.menu-open #ch-header{box-shadow
 @media(max-width:639px){#section-assessment .flip-front img[src$="congenital3.png"]{position:relative;left:3px;top:3px}}
 
 @media(max-width:639px){#section-assessment .flip-front img[src$="acquired4.png"]{position:relative;top:-3px}}
+
+/* Make the current-year values more prominent than the historical baseline on mobile. */
+@media(max-width:639px){#section-trends .trend-card-adaptive [data-stat-counter="expenditure-to"],#section-trends .trend-card-adaptive [data-stat-counter="clinic-to"]{font-size:clamp(59.76432px,16.36404vw,91.06944px)!important}}
+
+/* Center the mobile statistics-card heading text, including wrapped lines. */
+@media(max-width:639px){#section-trends .trend-card-adaptive>div:first-child>div{text-align:center!important;justify-content:center}}
+
+/* Compact mobile assessment labels with the same vertical inset as statistic labels. */
+@media(max-width:639px){#section-assessment .assessment-carousel .assessment-card>.absolute{min-height:0;padding-top:10px!important;padding-bottom:12px!important}}
+
+.mobile-chapter-title-break{display:none}
+@media(max-width:639px){.mobile-chapter-title-break{display:block}}
+
+@media(max-width:639px){#section-retention .desktop-retention-comma{display:none}}
+
+/* Match the expert credit to the lead paragraph text color. */
+#editorial-main-content #section-retention .expert-credit{color:var(--color-slate-700,#334155)}
+
+/* Bring the mobile comparison copy closer to its model image in B. */
+@media(max-width:639px){#section-comparison .comparison-model{height:124px;margin-bottom:-30px}}
+
+@media(max-width:639px){#section-comparison .comparison-model{margin-top:-2px}}
