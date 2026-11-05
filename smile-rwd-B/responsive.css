@@ -1459,6 +1459,6 @@ body #ch-header,body #ch-header.is-scrolled,html.menu-open #ch-header{box-shadow
 #editorial-main-content #section-retention .expert-credit{color:var(--color-slate-700,#334155)}
 
 /* Bring the mobile comparison copy closer to its model image in B. */
-@media(max-width:639px){#section-comparison .comparison-model{height:124px;margin-bottom:-30px}}
+@media(max-width:639px){#section-comparison .comparison-model{height:124px;margin-bottom:-25px}}
 
 @media(max-width:639px){#section-comparison .comparison-model{margin-top:-2px}}

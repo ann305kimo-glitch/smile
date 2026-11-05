@@ -217,7 +217,7 @@
 @media(max-width:639px){
  .photo-hero-b .b-hero-desktop-comma{display:none}
  .photo-hero-b .photo-hero-copy{top:calc(var(--b-header-height,64px) + 6vw + 30px)}
- .photo-hero-b .photo-hero-copy-inner{width:fit-content;text-align:center;transform:scale(1.15);transform-origin:center top}
+ .photo-hero-b .photo-hero-copy-inner{width:fit-content;text-align:center;transform:scale(1.265);transform-origin:center top}
 }
 
 @media(max-width:639px){#editorial-main-content .photo-hero-b h1{margin-bottom:4px}}
