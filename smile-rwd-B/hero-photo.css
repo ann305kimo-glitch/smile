@@ -184,4 +184,16 @@
 @media(max-width:639px){.photo-hero-b>.photo-hero-scroll{bottom:26px;left:50%}}
 
 /* Move the B headline and subtitle together down another 20px. */
-.photo-hero-b .photo-hero-copy-inner{position:relative;top:20px}
+.photo-hero-b .photo-hero-copy-inner{position:relative;top:25px}
+
+/* Reserve a clear band above the portrait for the fixed navigation at every aspect ratio. */
+@media(min-width:640px){
+ #editorial-main-content .photo-hero-b{background:#f5f5f6}
+ .photo-hero-b .photo-hero-media{top:72px;bottom:0}
+ .photo-hero-b .photo-hero-media img{object-position:center top}
+}
+@media(max-width:639px){#editorial-main-content .photo-hero-b{padding-top:64px}}
+
+/* Match portrait clearance exactly to the real navigation height. */
+@media(min-width:640px){.photo-hero-b .photo-hero-media{top:var(--b-header-height,72px)}}
+@media(max-width:639px){#editorial-main-content .photo-hero-b{padding-top:var(--b-header-height,64px)}}

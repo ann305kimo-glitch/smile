@@ -1347,3 +1347,44 @@ html.menu-open #ch-header #ch-nav-wrap>li>a:focus-visible{color:#1e4d9d}
 
 /* Remove excess space left below the raised food artwork on mobile. */
 @media(max-width:639px){#section-daily-care .care-food-image{margin-bottom:-4px}}
+
+/* Anchor the flip instruction to the card corner and improve readability. */
+#section-assessment .flip-card-hint{right:0!important;bottom:0!important;font-size:12px!important;line-height:1.4!important;letter-spacing:2px!important;padding:10px 7px!important;background:rgba(10,39,90,.9)!important;border-radius:8px 0 0 0!important;color:#fff!important}
+#section-assessment .flip-card-hint svg{width:15px!important;height:15px!important;opacity:1!important;stroke-width:2.5}
+
+#section-retention .expert-credit{max-width:760px;margin:40px auto 0;color:rgba(30,77,157,.8);text-align:left}
+@media(max-width:639px){#section-retention .expert-credit{margin-top:28px}}
+
+/* Desktop credit belongs to the whole feature, outside the final white chapter panel. */
+#section-retention .expert-credit-mobile{display:none}
+#section-retention .expert-credit-desktop{display:block;max-width:var(--editorial-container-width,1024px);margin:24px auto 0;padding:0 16px;box-sizing:border-box}
+@media(max-width:639px){#section-retention .expert-credit-mobile{display:block}#section-retention .expert-credit-desktop{display:none}}
+
+/* Slightly larger feature-wide expert credit on desktop and mobile. */
+#editorial-main-content #section-retention .expert-credit{font-size:19px!important;line-height:1.75!important}
+
+@media(min-width:640px){#section-retention .expert-credit-desktop{text-align:center}}
+
+/* Override the shared note typography for the feature expert credit. */
+#editorial-main-content #section-retention .expert-credit.type-normalized[data-type="note"]{--role-size:14px;font-size:14px!important;line-height:1.75!important}
+
+/* Align the desktop feature credit with the retention checklist's left edge. */
+@media(min-width:640px){
+ #section-retention .expert-credit-desktop{max-width:760px;width:calc(100% - 112px);padding-left:0;padding-right:0;text-align:left;margin-left:auto;margin-right:auto}
+}
+@media(min-width:640px) and (max-width:767px){
+ #section-retention .expert-credit-desktop{width:calc(100% - 112px)}
+}
+
+/* Give the desktop retention explanations room to stay on one line closer to the illustration. */
+@media(min-width:1024px){#section-retention .retention-corner-layout .retention-list>li:nth-child(-n+3){padding-right:300px}}
+
+/* Lift and slightly reduce the desktop retainer artwork. */
+@media(min-width:1024px){#section-retention .retention-corner-illustration{top:50px;width:399px}}
+
+/* B version uses the original solid white navigation at all scroll positions. */
+body #ch-header,body #ch-header.is-scrolled,html.menu-open #ch-header{background-color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.14);-webkit-box-shadow:0 2px 8px rgba(0,0,0,.14)}
+body #ch-header:not(.is-scrolled) #ch-nav-wrap>li>a:hover,body #ch-header:not(.is-scrolled) #ch-nav-wrap>li>a:focus-visible{color:#1e4d9d}
+
+/* Softer B navigation shadow without a hard-looking lower edge. */
+body #ch-header,body #ch-header.is-scrolled,html.menu-open #ch-header{box-shadow:0 5px 16px rgba(0,0,0,.055);-webkit-box-shadow:0 5px 16px rgba(0,0,0,.055)}

@@ -10,3 +10,15 @@
   requestAnimationFrame(()=>requestAnimationFrame(()=>{hero.classList.remove('hero-entrance-pending');hero.classList.add('hero-entrance-playing');}));
  }catch(error){hero.classList.remove('hero-entrance-pending');}
 })();
+
+// Keep the portrait flush with the solid B header as navigation height changes.
+(() => {
+ function align(){
+  const header=document.getElementById('ch-header'),hero=document.querySelector('.photo-hero-b');
+  if(!header||!hero)return;
+  const update=()=>hero.style.setProperty('--b-header-height',header.getBoundingClientRect().height+'px');
+  update();window.addEventListener('resize',update,{passive:true});
+  if('ResizeObserver' in window)new ResizeObserver(update).observe(header);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',align,{once:true});else align();
+})();
