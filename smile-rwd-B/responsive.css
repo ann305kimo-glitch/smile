@@ -1388,3 +1388,55 @@ body #ch-header:not(.is-scrolled) #ch-nav-wrap>li>a:hover,body #ch-header:not(.i
 
 /* Softer B navigation shadow without a hard-looking lower edge. */
 body #ch-header,body #ch-header.is-scrolled,html.menu-open #ch-header{box-shadow:0 5px 16px rgba(0,0,0,.055);-webkit-box-shadow:0 5px 16px rgba(0,0,0,.055)}
+
+/* Keep desktop extraction content compact enough to match the measured Q&A card. */
+@media(min-width:1024px){
+ .assessment-card>[data-assessment-slide-desktop="1"]>div:first-child{margin-bottom:28px}
+ .assessment-card>[data-assessment-slide-desktop="1"]>.flex{position:relative;align-items:flex-start;gap:12px}
+ .assessment-card>[data-assessment-slide-desktop="1"]>.flex>div:first-child{flex:0 0 calc(100% - 312px);max-width:none;padding-bottom:0}
+ .assessment-card>[data-assessment-slide-desktop="1"] .assessment-illustration{position:absolute;right:0;bottom:-52px;margin-bottom:0!important;width:300px!important}
+ .assessment-card>[data-assessment-slide-desktop="1"] .assessment-illustration>img{max-height:310px}
+}
+
+/* Crop the girl's lower torso to shorten the second assessment card on mobile. */
+@media(max-width:639px){
+ .assessment-card [data-assessment-slide-desktop="1"] .assessment-illustration{height:clamp(165px,54vw,210px);overflow:hidden;justify-content:flex-start}
+ .assessment-card [data-assessment-slide-desktop="1"] .assessment-illustration>img{flex:0 0 auto;width:100%;height:auto;max-height:none;object-position:center top}
+}
+
+/* Lift the mobile portrait slightly and reveal a little more of the shoulders. */
+@media(max-width:639px){.assessment-card [data-assessment-slide-desktop="1"] .assessment-illustration{height:clamp(185px,calc(54vw + 20px),230px);margin-top:-10px!important}}
+
+/* More compact spacing between the mobile comparison categories. */
+@media(max-width:639px){#section-comparison .comparison-detail{padding-top:13px;padding-bottom:13px}}
+
+/* Add breathing room above each subsequent mobile chapter accent. */
+@media(max-width:639px){#editorial-main-content .chapter-list{gap:72px!important}}
+
+/* Restore intentional title breaks in the two-column mobile card layout only. */
+@media(min-width:360px) and (max-width:639px){#section-assessment .flip-front-title-break,#section-assessment .flip-back-title-break{display:block}}
+
+/* Let the longer craniofacial description use the full lower part of its mobile card. */
+@media(max-width:639px){
+ #section-assessment [data-flip-card]:has(img[src$="congenital4.png"]) .flip-back{grid-template-rows:auto 2px minmax(0,1fr);row-gap:8px;padding:14px!important}
+ #section-assessment [data-flip-card]:has(img[src$="congenital4.png"]) .flip-back>div:first-child{padding:0;justify-content:flex-start}
+ #section-assessment [data-flip-card]:has(img[src$="congenital4.png"]) .flip-back>div:nth-child(3){height:auto;padding:0;overflow:visible}
+ #section-assessment [data-flip-card]:has(img[src$="congenital4.png"]) .flip-back>div:nth-child(3)>div{width:100%}
+ #editorial-main-content #section-assessment [data-flip-card]:has(img[src$="congenital4.png"]) .flip-back p{line-height:1.45!important}
+}
+
+/* Center the entire longer back-face content group vertically, not just its divider. */
+@media(max-width:639px){#section-assessment [data-flip-card]:has(img[src$="congenital4.png"]) .flip-back{grid-template-rows:auto 2px auto;align-content:center}}
+
+/* Compensate visually for the trailing ideographic comma in the two-column title. */
+@media(min-width:360px) and (max-width:639px){#section-assessment .missing-tooth-title-first{position:relative;left:6px}}
+
+/* Optical image sizing refinements apply only to mobile population cards. */
+@media(max-width:639px){#section-assessment .flip-front img[src$="congenital4.png"]{scale:1.026}#section-assessment .flip-front img[src$="acquired1-v2.png"]{scale:1.027425}#section-assessment .flip-front img[src$="acquired2.png"]{scale:0.9785}#section-assessment .flip-front img[src$="acquired3.png"]{scale:1.067}#section-assessment .flip-front img[src$="acquired4.png"]{scale:1.05824775}}
+
+/* Enlarge the mobile profile upward from its bottom edge. */
+@media(max-width:639px){#section-assessment .flip-front img[src$="congenital3.png"]{scale:1.15668;transform-origin:center bottom}}
+
+@media(max-width:639px){#section-assessment .flip-front img[src$="congenital3.png"]{position:relative;left:3px;top:3px}}
+
+@media(max-width:639px){#section-assessment .flip-front img[src$="acquired4.png"]{position:relative;top:-3px}}
