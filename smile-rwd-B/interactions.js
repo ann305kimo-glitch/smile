@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded',()=>{
  nav.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>{menu(false);const target=document.querySelector(a.getAttribute('href'));if(target){target.tabIndex=-1;target.focus({preventScroll:true});}}));menu(false);
  document.querySelector('[aria-label="捲動至內容"]').addEventListener('click',()=>document.getElementById('section-intro').scrollIntoView({behavior:reduced?'instant':'smooth'}));
  const url=new URL(location.href);url.hash='';
- document.getElementById('facebookShare').href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(url.href);
+ document.getElementById('facebookShare').href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('https://web.commonhealth.com.tw/orthodontics-guide/index.html');
  document.getElementById('lineShare').href='https://social-plugins.line.me/lineit/share?url='+encodeURIComponent(url.href)+'&text='+encodeURIComponent(document.title);
  document.querySelectorAll('a[target="_blank"]').forEach(a=>a.rel='noopener noreferrer');
  const top=document.getElementById('scroll-to-top-btn');top.setAttribute('aria-label','回到頁首');
