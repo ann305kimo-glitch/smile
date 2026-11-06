@@ -1515,11 +1515,11 @@ body #ch-header,body #ch-header.is-scrolled,html.menu-open #ch-header{box-shadow
  width: 100%;
  margin: 0;
  text-align: center;
- font-size: clamp(15px, 4vw, 16px) !important;
+ font-size: clamp(16px, calc(4vw + 1px), 17px) !important;
  line-height: 1.5 !important;
 }
 @media (min-width: 640px) {
  #editorial-main-content #section-assessment .flip-grid .flip-back > .flip-back-description {
-  font-size: 18px !important;
+  font-size: 19px !important;
  }
 }
