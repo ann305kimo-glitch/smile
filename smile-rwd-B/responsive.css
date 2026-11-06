@@ -1462,3 +1462,45 @@ body #ch-header,body #ch-header.is-scrolled,html.menu-open #ch-header{box-shadow
 @media(max-width:639px){#section-comparison .comparison-model{height:124px;margin-bottom:-25px}}
 
 @media(max-width:639px){#section-comparison .comparison-model{margin-top:-2px}}
+
+/* Center the longer craniofacial card back as a single group on desktop. */
+@media (min-width:640px) {
+ #section-assessment [data-flip-card]:has(img[src$="congenital4.png"]) .flip-back {
+  justify-content: center;
+  gap: 8px;
+ }
+ #section-assessment [data-flip-card]:has(img[src$="congenital4.png"]) .flip-back > div:first-child {
+  height: auto;
+  padding-bottom: 0;
+ }
+ #section-assessment [data-flip-card]:has(img[src$="congenital4.png"]) .flip-back > div:nth-child(3) {
+  flex: none;
+  height: auto;
+  padding: 0;
+  overflow: visible;
+ }
+ #section-assessment [data-flip-card]:has(img[src$="congenital4.png"]) .flip-back > div:nth-child(3) > div {
+  width: 100%;
+  text-align: center;
+ }
+ #section-assessment [data-flip-card]:has(img[src$="congenital4.png"]) .flip-back p {
+  text-align: center;
+ }
+}
+
+@media (min-width:640px) {
+ #section-assessment .flip-back > div:has(.tooth-shape-first-line) {
+  width: 100%;
+  padding-inline: 0;
+ }
+ #section-assessment .flip-back > div:has(.tooth-shape-first-line) > div {
+  width: 100%;
+ }
+ #section-assessment .tooth-shape-first-line {
+  white-space: nowrap;
+ }
+}
+
+@media (min-width:1024px) {
+ #section-assessment .assessment-population-intro { max-width: 100%; }
+}
