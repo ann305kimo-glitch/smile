@@ -30,7 +30,7 @@
   <meta name="twitter:image:alt" content="矯正前，先看懂代價：打造完美笑容的安心法則｜康健雜誌">
 
   <!-- Google Fonts 全套字體定義 (純黑體 Noto Sans TC) -->
-  <link rel="stylesheet" href="./fonts/fonts.css?v=299">
+  <link rel="stylesheet" href="./fonts/fonts.css?v=300">
   
   <!-- 載入外觀樣式表與動態效果表 -->
   <link rel="stylesheet" href="styles.css">
@@ -149,6 +149,178 @@
   })(window, document, 'script', 'dataLayer', 'GTM-MCMN77');</script>
 <!-- End Google Tag Manager -->
 
+  <style>
+    #editorial-main-content > .related-reading {
+      margin: 0 auto;
+      padding: clamp(12px, 2vw, 24px) clamp(30px, 4vw, 50px) clamp(36px, 6vw, 76px);
+      background-color: #f5f5f6;
+      color: #1e4d9d;
+    }
+    .related-reading h2 {
+      margin: 0 0 28px;
+      text-align: center;
+      font-size: clamp(26px, 3.5vw, 42px);
+      font-family: "Noto Sans TC", sans-serif;
+      font-weight: 900;
+    }
+    .related-reading h2::before {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 9px;
+      margin: 0 auto 14px;
+      background: #ffb400;
+    }
+    .related-reading-carousel {
+      position: relative;
+      max-width: 1020px;
+      margin: 0 auto;
+    }
+    .related-reading ul {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .related-reading a {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow: hidden;
+      border: 1px solid #e3e5e7;
+      border-radius: 12px;
+      background: #fff;
+      color: #222;
+      text-decoration: none;
+    }
+    .related-reading a:focus-visible {
+      outline: 2px solid #1e4d9d;
+      outline-offset: 3px;
+    }
+    .related-reading-image {
+      overflow: hidden;
+    }
+    .related-reading img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #edf3f9;
+    }
+    .related-reading h3 {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      margin: 16px 17px;
+      font-size: clamp(16px, 1.5vw, 19px);
+      font-weight: 600;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+    }
+    .related-reading-details {
+      align-self: center;
+      margin: auto 0 18px;
+      padding: 5px 11px;
+      border: 1px solid #1e4d9d;
+      border-radius: 999px;
+      color: #1e4d9d;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+    @media (any-hover: hover) {
+      .related-reading li:hover img {
+        transform: scale(1.04);
+      }
+      .related-reading a:hover .related-reading-details,
+      .related-reading-controls button:hover {
+        background-color: #1e4d9d;
+        border-color: #1e4d9d;
+        color: #fff;
+      }
+    }
+    @media (any-hover: hover) and (prefers-reduced-motion: no-preference) {
+      .related-reading img {
+        transition: transform 180ms ease;
+      }
+      .related-reading-details,
+      .related-reading-controls button {
+        transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+      }
+    }
+    .related-reading [hidden] { display: none; }
+    .related-reading-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+    }
+    .related-reading-dots span {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #bdc9d8;
+    }
+    .related-reading-dots .is-current { background: #1e4d9d; }
+    .related-reading-controls button {
+      display: grid;
+      place-items: center;
+      position: absolute;
+      top: 44%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 1px solid #c7d5e4;
+      border-radius: 50%;
+      background: #fff;
+      color: #203244;
+      font-size: 28px;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .related-reading-controls button::before {
+      content: "";
+      box-sizing: border-box;
+      width: 9px;
+      height: 9px;
+      border-top: 2px solid currentColor;
+      border-right: 2px solid currentColor;
+      transform: translateX(-1px) rotate(45deg);
+    }
+    .related-reading-controls [data-step="-1"]::before {
+      transform: translateX(1px) rotate(-135deg);
+    }
+    .related-reading-controls [data-step="-1"] { left: -22px; }
+    .related-reading-controls [data-step="1"] { right: -22px; }
+    .related-reading-controls button:focus-visible {
+      outline: 2px solid #1e4d9d;
+      outline-offset: 3px;
+    }
+    @media (max-width: 900px) {
+      .related-reading ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (min-width: 640px) {
+      #editorial-main-content > .related-reading + .production-credit {
+        background-color: #f5f5f6;
+      }
+    }
+    @media (max-width: 639px) {
+      #editorial-main-content > .related-reading { background-color: #fff; }
+      .related-reading ul {
+        grid-template-columns: minmax(0, 1fr);
+        overflow: clip;
+      }
+      .related-reading-carousel { touch-action: pan-y pinch-zoom; }
+      #section-retention .expert-credit-mobile {
+        margin-top: 0;
+        border-top: 1px solid #244fa0;
+        padding-top: 18px;
+      }
+    }
+  </style>
 </head>
 <body class="bg-white text-slate-900 antialiased selection:bg-amber-200" id="header">
 	<!-- Google Tag Manager：瀏覽器停用 JavaScript 時使用的備用載入方式。 -->
@@ -535,6 +707,74 @@
 <p class="expert-credit expert-credit-desktop type-normalized" data-type="note">諮詢專家：台北醫學大學附設醫院齒顎矯正科主任鄭信忠、中國醫藥大學附設醫院齒顎矯正科主任余建宏</p></section>
 
         </div>
+        <section class="related-reading" aria-labelledby="related-reading-title">
+          <h2 id="related-reading-title">延伸閱讀</h2>
+          <div class="related-reading-carousel">
+          <ul id="related-reading-articles">
+            <li>
+              <a href="https://www.commonhealth.com.tw/article/94648?from=orthodontics-guide">
+                <div class="related-reading-image"><img src="https://as.chdev.tw/web/article/b/2/4/bfd671a6-2432-43aa-aeab-ae7c784320d11790671926.webp" alt="" loading="lazy" decoding="async"></div>
+                <h3>當看牙愈來愈像消費，低價、便利背後，醫療品質誰把關？</h3>
+                <span class="related-reading-details" aria-hidden="true">了解詳情</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.commonhealth.com.tw/article/94646?from=orthodontics-guide">
+                <div class="related-reading-image"><img src="https://as.chdev.tw/web/article/b/d/4/ba00f56c-d1c6-43ce-b2af-d0878e9bee3f1790673118.webp" alt="" loading="lazy" decoding="async"></div>
+                <h3>牙科自費，你容易踩哪種雷？測出你的風險盲點</h3>
+                <span class="related-reading-details" aria-hidden="true">了解詳情</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.commonhealth.com.tw/article/94644?from=orthodontics-guide">
+                <div class="related-reading-image"><img src="https://as.chdev.tw/web/article/3/6/4/3ff8cfc1-6b79-415f-8396-f4cba09539921790156818.webp" alt="" loading="lazy" decoding="async"></div>
+                <h3>植牙｜不是有錢就能做，先看5大評估</h3>
+                <span class="related-reading-details" aria-hidden="true">了解詳情</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.commonhealth.com.tw/article/94645?from=orthodontics-guide">
+                <div class="related-reading-image"><img src="https://as.chdev.tw/web/article/3/6/4/38af292b-6162-4be5-aa8c-6d6aa1cc6c601790673925.webp" alt="" loading="lazy" decoding="async"></div>
+                <h3>矯正｜別只挑牙套，醫師診斷才是關鍵</h3>
+                <span class="related-reading-details" aria-hidden="true">了解詳情</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.commonhealth.com.tw/article/94647?from=orthodontics-guide">
+                <div class="related-reading-image"><img src="https://as.chdev.tw/web/article/2/1/4/2fa8b274-1769-4896-8c67-3554c56624421790674574.webp" alt="" loading="lazy" decoding="async"></div>
+                <h3>美白｜牙齒好黃怎麼辦？先找原因，再選亮白</h3>
+                <span class="related-reading-details" aria-hidden="true">了解詳情</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.commonhealth.com.tw/article/94649?from=orthodontics-guide">
+                <div class="related-reading-image"><img src="https://as.chdev.tw/web/article/5/4/4/563afea7-4e48-44c8-b0c8-c7c334b3486f1790675690.webp" alt="" loading="lazy" decoding="async"></div>
+                <h3>花大錢做牙，先學自保！查醫師、看報價，遇糾紛3步求助</h3>
+                <span class="related-reading-details" aria-hidden="true">了解詳情</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.commonhealth.com.tw/article/94874?from=orthodontics-guide">
+                <div class="related-reading-image"><img src="https://as.chdev.tw/web/article/9/8/4/9c594d8c-8d24-42ce-af0a-b1c37045d6f21793779164.webp" alt="" loading="lazy" decoding="async"></div>
+                <h3>一套微笑計畫走過人生不同階段　隱形牙套品牌以科技回應全齡需求</h3>
+                <span class="related-reading-details" aria-hidden="true">了解詳情</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.commonhealth.com.tw/article/94879?from=orthodontics-guide">
+                <div class="related-reading-image"><img src="https://as.chdev.tw/web/article/4/a/4/4c4c2b09-a308-48f3-b057-9dcb8bd71c2b1793347721.webp" alt="" loading="lazy" decoding="async"></div>
+                <h3>牙齒隱形矯正有年齡限制嗎？【全齡矯正指南】7歲到熟齡的矯正評估、方式、流程一次看懂</h3>
+                <span class="related-reading-details" aria-hidden="true">了解詳情</span>
+              </a>
+            </li>
+          </ul>
+          <div class="related-reading-controls" hidden>
+            <button type="button" data-step="-1" aria-controls="related-reading-articles" aria-label="上一篇延伸閱讀"></button>
+            <button type="button" data-step="1" aria-controls="related-reading-articles" aria-label="下一篇延伸閱讀"></button>
+          </div>
+          </div>
+          <div class="related-reading-dots" role="img" hidden></div>
+        </section>
         <p class="production-credit">製作：鄧桂芬、謝惠靜、王湘翎、盧亞屏<br>發布日期：2026.11</p>
       </main>
 
@@ -608,6 +848,99 @@
   <!-- JavaScript 互動腳本 (含漢堡選單、平滑錨點捲動、卡片翻轉、無阻礙輪播與數字累加動畫) -->
   <script src="interactions.js?v=b-official-facebook-share-298" defer></script>
 <script src="hero-entrance.js?v=b-mobile-entrance-291" defer></script>
+  <script>
+    (() => {
+      const section = document.querySelector('.related-reading');
+      const articles = Array.from(section.querySelectorAll('li'));
+      const controls = section.querySelector('.related-reading-controls');
+      const list = section.querySelector('#related-reading-articles');
+      const mobile = window.matchMedia('(max-width: 639px)');
+      const indicators = section.querySelector('.related-reading-dots');
+      const dots = articles.map(() => {
+        const dot = document.createElement('span');
+        dot.setAttribute('aria-hidden', 'true');
+        indicators.append(dot);
+        return dot;
+      });
+      let start = 0;
+      let transitioning = false;
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+      function showArticles() {
+        const visibleCount = mobile.matches ? 1 : 3;
+        for (let offset = 0; offset < articles.length; offset++) {
+          const article = articles[(start + offset) % articles.length];
+          article.hidden = offset >= visibleCount;
+          list.append(article);
+        }
+        dots.forEach((dot, index) => dot.classList.toggle('is-current', index === start));
+        indicators.setAttribute('aria-label', `第 ${start + 1} 篇，共 ${articles.length} 篇`);
+      }
+
+      async function stepBy(step) {
+        if (transitioning) return;
+        const next = (start + step + articles.length) % articles.length;
+        const outgoing = articles[start];
+        if (!mobile.matches || reducedMotion.matches || typeof outgoing.animate !== 'function') {
+          start = next;
+          showArticles();
+          return;
+        }
+
+        transitioning = true;
+        try {
+          const exit = outgoing.animate(
+            [{ opacity: 1, transform: 'translateX(0)' },
+             { opacity: 0, transform: `translateX(${-step * 100}%)` }],
+            { duration: 180, easing: 'ease-in', fill: 'forwards' }
+          );
+          await exit.finished.catch(() => {});
+          start = next;
+          showArticles();
+          exit.cancel();
+
+          if (!mobile.matches) return;
+          const enter = articles[start].animate(
+            [{ opacity: 0.35, transform: `translateX(${step * 100}%)` },
+             { opacity: 1, transform: 'translateX(0)' }],
+            { duration: 440, easing: 'cubic-bezier(.18,.75,.25,1)' }
+          );
+          await enter.finished.catch(() => {});
+        } finally {
+          transitioning = false;
+        }
+      }
+
+      showArticles();
+      mobile.addEventListener('change', showArticles);
+      controls.hidden = false;
+      indicators.hidden = false;
+      controls.querySelectorAll('button').forEach(button => {
+        button.addEventListener('click', () => {
+          stepBy(Number(button.dataset.step));
+        });
+      });
+
+      let touchStart;
+      list.addEventListener('touchstart', event => {
+        touchStart = mobile.matches && event.touches.length === 1 ? event.touches[0] : null;
+      }, { passive: true });
+      list.addEventListener('touchcancel', () => { touchStart = null; });
+      list.addEventListener('touchend', event => {
+        const origin = touchStart;
+        touchStart = null;
+        if (!origin || !mobile.matches) return;
+
+        const touch = event.changedTouches[0];
+        const dx = touch.clientX - origin.clientX;
+        const dy = touch.clientY - origin.clientY;
+        if (Math.abs(dx) < 45 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+
+        event.preventDefault();
+        stepBy(dx < 0 ? 1 : -1);
+      }, { passive: false });
+    })();
+  </script>
 </body>
 </html>
 
